@@ -17,14 +17,16 @@ export const metadata: Metadata = {
   description: 'Information about Joseph Scott professional experience and ways of contacting him'
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<
+  Readonly<{
+    children: React.ReactNode;
+  }>
+> = ({ children }) => {
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
