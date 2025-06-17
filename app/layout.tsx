@@ -23,7 +23,7 @@ const RootLayout: React.FC<
   }>
 > = ({ children }) => {
   return (
-    <html lang='en'>
+    <html lang='en' className='scroll-smooth'>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
