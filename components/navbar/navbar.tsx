@@ -26,7 +26,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
       <nav ref={navBarRef} className='bg-gray-800 flex justify-center items-center p-4 w-full shadow-xl gap-10'>
         {children}
       </nav>
-      {showNavDropDown && <DropDownNavButton />}
+      <DropDownNavButton show={showNavDropDown} />
     </>
   );
 };
