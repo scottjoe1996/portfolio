@@ -12,7 +12,7 @@ const DropDownNavButton: React.FC<React.PropsWithChildren<DropDownNavButtonProps
         show ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
-      <HamburgerMenu size='2rem' />
+      <HamburgerMenu size='2rem' show={show} />
       {children}
     </nav>
   );
