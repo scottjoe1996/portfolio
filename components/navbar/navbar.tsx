@@ -31,7 +31,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
       >
         {children}
       </nav>
-      <DropDownNavButton show={showNavDropDown}> {children}</DropDownNavButton>
+      <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
     </>
   );
 };

@@ -7,13 +7,34 @@ interface DropDownNavButtonProps {
 
 const DropDownNavButton: React.FC<React.PropsWithChildren<DropDownNavButtonProps>> = ({ children, show }) => {
   const [showMenu, setShowMenu] = React.useState(false);
+  const menuId = 'dropdown-nav-menu';
+  const hidden = !show;
 
   const handleShowChange = React.useCallback((open: boolean) => {
     return () => setShowMenu(open);
   }, []);
 
-  const menuId = 'dropdown-nav-menu';
-  const hidden = !show;
+  const handleMenuItemBlur = React.useCallback((event: React.FocusEvent<HTMLLIElement>) => {
+    const menuElement = document.getElementById(menuId);
+
+    if (menuElement && menuElement.contains(event.relatedTarget)) {
+      return;
+    }
+    setShowMenu(false);
+  }, []);
+
+  const handleButtonClick = React.useCallback(() => {
+    setShowMenu(true);
+
+    setTimeout(() => {
+      const menuElement = document.getElementById(menuId);
+
+      if (menuElement) {
+        const firstItemAnchor = menuElement.querySelector('[role="menuitem"] a') as HTMLElement | null;
+        firstItemAnchor?.focus();
+      }
+    }, 10);
+  }, []);
 
   return (
     <nav
@@ -28,13 +49,13 @@ const DropDownNavButton: React.FC<React.PropsWithChildren<DropDownNavButtonProps
       {showMenu ? (
         <ul id={menuId} role='menu' className='px-2'>
           {React.Children.map(children, (child) => (
-            <li role='menuitem' className='my-2'>
+            <li role='menuitem' className='my-2' onFocus={handleShowChange(true)} onBlur={handleMenuItemBlur}>
               {child}
             </li>
           ))}
         </ul>
       ) : (
-        <button onClick={handleShowChange(true)} aria-haspopup='menu' aria-expanded={show} aria-controls={menuId} aria-label='Open navigation menu'>
+        <button onClick={handleButtonClick} aria-haspopup='menu' aria-expanded={show} aria-controls={menuId} aria-label='Open navigation menu'>
           <HamburgerMenu size='2rem' animate={show} />
         </button>
       )}
