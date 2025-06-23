@@ -12,22 +12,29 @@ const DropDownNavButton: React.FC<React.PropsWithChildren<DropDownNavButtonProps
     return () => setShowMenu(open);
   }, []);
 
+  const menuId = 'dropdown-nav-menu';
+  const hidden = !show;
+
   return (
     <nav
+      aria-label='Support Nav Menu'
+      inert={hidden}
       className={`leading-none fixed top-0 right-4 ml-auto bg-gray-800 p-2 rounded-b-md shadow-xl transition-[translate,opacity] ease-in-out duration-200 ${
         show ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
-      onMouseEnter={handleShowChange(true)}
       onMouseLeave={handleShowChange(false)}
+      onMouseEnter={handleShowChange(true)}
     >
       {showMenu ? (
-        <ul className='px-2'>
+        <ul id={menuId} role='menu' className='px-2'>
           {React.Children.map(children, (child) => (
-            <li className='my-2'>{child}</li>
+            <li role='menuitem' className='my-2'>
+              {child}
+            </li>
           ))}
         </ul>
       ) : (
-        <button>
+        <button onClick={handleShowChange(true)} aria-haspopup='menu' aria-expanded={show} aria-controls={menuId} aria-label='Open navigation menu'>
           <HamburgerMenu size='2rem' animate={show} />
         </button>
       )}
