@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import DropDownNavButton from './drop-down-nav-button';
+import React from "react";
+import DropDownNavButton from "./drop-down-nav-button";
 
 const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   const navBarRef = React.useRef<HTMLElement>(null);
@@ -9,7 +9,10 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [showNavDropDown, setShowNavDropDown] = React.useState(false);
 
   const onScroll = React.useCallback(() => {
-    if (navBarRef.current?.clientHeight && window.scrollY > navBarRef.current.clientHeight) {
+    if (
+      navBarRef.current?.clientHeight &&
+      window.scrollY > navBarRef.current.clientHeight
+    ) {
       setShowNavDropDown(true);
     } else {
       setShowNavDropDown(false);
@@ -17,16 +20,16 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   }, []);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [onScroll]);
 
   return (
     <>
       <nav
         ref={navBarRef}
-        aria-label='Main Nav Bar'
-        className='bg-gray-800 flex justify-center items-center p-4 w-full shadow-xl gap-10'
+        aria-label="Main Nav Bar"
+        className="bg-gray-800 flex justify-center items-center p-5 w-full drop-shadow-gray-600 drop-shadow-md gap-10"
         inert={showNavDropDown}
       >
         {children}
