@@ -29,7 +29,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
       <nav
         ref={navBarRef}
         aria-label="Main Nav Bar"
-        className="bg-gray-800 flex justify-center items-center p-5 w-full drop-shadow-gray-600 drop-shadow-md gap-10"
+        className="bg-stone-800 flex justify-center items-center p-5 w-full drop-shadow-neutral-700 drop-shadow-md gap-10"
         inert={showNavDropDown}
       >
         {children}
