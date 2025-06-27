@@ -12,6 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer components {
+  .container-shadow {
+    @apply drop-shadow-zinc-400/50 drop-shadow-lg;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

@@ -62,7 +62,7 @@ const DropDownNavButton: React.FC<
     <nav
       aria-label="Support Nav Menu"
       inert={hidden}
-      className={`leading-none fixed top-0 right-4 ml-auto bg-zinc-100  rounded-b-md drop-shadow-zinc-400 drop-shadow-md transition-[translate,opacity] ease-in-out duration-200 overflow-hidden ${
+      className={`leading-none fixed top-0 right-4 ml-auto bg-zinc-100  rounded-b-md container-shadow transition-[translate,opacity] ease-in-out duration-200 overflow-hidden ${
         show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
       onMouseLeave={handleShowChange(false)}
