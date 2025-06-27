@@ -69,28 +69,32 @@ const DropDownNavButton: React.FC<
       onMouseEnter={handleShowChange(true)}
     >
       <motion.div
-        className="flex items-center justify-center"
+        className="flex items-center justify-center p-3 box-content"
         variants={{
           open: {
-            width: size.height,
-            height: size.width,
+            width: size.width,
+            height: size.height,
             transition: { duration: 0.4, ease: [0.23, 1, 0.32, 1] },
           },
           closed: {
-            width: size.height,
-            height: size.width,
+            width: size.width,
+            height: size.height,
           },
         }}
         animate={showMenu ? "open" : "closed"}
       >
-        <div ref={menuContainerRef} className="p-2">
+        <div ref={menuContainerRef}>
           {showMenu ? (
-            <ul id={menuId} role="menu">
+            <ul
+              id={menuId}
+              role="menu"
+              className="px-2 *:not-first:not-last:my-3"
+            >
               {React.Children.map(children, (child) => (
                 <li
                   role="menuitem"
                   onBlur={handleMenuItemBlur}
-                  className="m-4 w-fit text-zinc-900 group hover:text-zinc-800 focus:text-zinc-800 transition-colors duration-200"
+                  className="w-fit text-zinc-900 group hover:text-zinc-800 focus:text-zinc-800 transition-colors duration-200"
                 >
                   {child}
                 </li>
@@ -104,7 +108,7 @@ const DropDownNavButton: React.FC<
               aria-controls={menuId}
               aria-label="Open navigation menu"
             >
-              <HamburgerMenu size="2rem" animate={show} />
+              <HamburgerMenu size="2.5rem" animate={show} />
             </button>
           )}
         </div>
