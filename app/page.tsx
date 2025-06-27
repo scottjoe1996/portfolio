@@ -12,11 +12,10 @@ const Portfolio: React.FC = () => {
         <NavLink href="#contact">contact</NavLink>
       </Navbar>
       <main className="w-full flex flex-col items-center justify-center">
-        <div>
-          <h1 className="m-10 text-8xl">
-            Hi, I&apos;m Joe Scott, Web Developer
-          </h1>
-        </div>
+        <section className="w-full h-[92dvh] bg-fg-gradient flex flex-col items-center justify-center text-center">
+          <h1 className="text-7xl mb-2">JOSEPH SCOTT</h1>
+          <p className="text-5xl">Designing websites that users love.</p>
+        </section>
         <section id="about" className="h-50 my-50">
           <h2>This is the about section</h2>
         </section>
