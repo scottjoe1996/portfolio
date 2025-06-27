@@ -12,7 +12,7 @@ const Portfolio: React.FC = () => {
         <NavLink href="#contact">contact</NavLink>
       </Navbar>
       <main className="w-full flex flex-col items-center justify-center">
-        <section className="w-full h-[92dvh] bg-fg-gradient flex flex-col items-center justify-center text-center">
+        <section className="w-full h-[92dvh] flex flex-col items-center justify-center text-center">
           <h1 className="text-7xl mb-2">JOSEPH SCOTT</h1>
           <p className="text-5xl">Designing websites that users love.</p>
         </section>

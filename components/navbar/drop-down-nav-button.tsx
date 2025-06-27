@@ -49,7 +49,7 @@ const DropDownNavButton: React.FC<
     }, 10);
   }, []);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (menuContainerRef.current) {
       setSize({
         width: menuContainerRef.current.clientWidth,
@@ -62,7 +62,7 @@ const DropDownNavButton: React.FC<
     <nav
       aria-label="Support Nav Menu"
       inert={hidden}
-      className={`leading-none fixed top-0 right-4 ml-auto bg-zinc-200  rounded-b-md drop-shadow-zinc-600 drop-shadow-md transition-[translate,opacity] ease-in-out duration-200 overflow-hidden ${
+      className={`leading-none fixed top-0 right-4 ml-auto bg-zinc-100  rounded-b-md drop-shadow-zinc-400 drop-shadow-md transition-[translate,opacity] ease-in-out duration-200 overflow-hidden ${
         show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
       onMouseLeave={handleShowChange(false)}
@@ -90,7 +90,7 @@ const DropDownNavButton: React.FC<
                 <li
                   role="menuitem"
                   onBlur={handleMenuItemBlur}
-                  className="my-3 w-fit text-zinc-900 group hover:text-zinc-800 focus:text-zinc-800 transition-colors duration-200"
+                  className="m-4 w-fit text-zinc-900 group hover:text-zinc-800 focus:text-zinc-800 transition-colors duration-200"
                 >
                   {child}
                 </li>
