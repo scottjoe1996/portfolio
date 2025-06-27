@@ -89,10 +89,8 @@ const DropDownNavButton: React.FC<
               {React.Children.map(children, (child) => (
                 <li
                   role="menuitem"
-                  onFocus={handleShowChange(true)}
                   onBlur={handleMenuItemBlur}
                   className="my-3 w-fit text-zinc-900 group hover:text-zinc-800 focus:text-zinc-800 transition-colors duration-200"
-                  tabIndex={0}
                 >
                   {child}
                 </li>
