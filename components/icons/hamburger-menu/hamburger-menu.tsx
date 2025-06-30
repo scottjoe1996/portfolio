@@ -14,7 +14,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
       viewBox="0 0 170.08 184.25"
       height={size}
     >
-      <g id="hamburger-menu" className="fill-zinc-900">
+      <g id="hamburger-menu" className="fill-zinc-100">
         <g id="bottom-bar">
           <rect
             x="0"

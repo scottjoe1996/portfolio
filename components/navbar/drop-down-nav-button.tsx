@@ -62,7 +62,7 @@ const DropDownNavButton: React.FC<
     <nav
       aria-label="Support Nav Menu"
       inert={hidden}
-      className={`container-shadow fixed top-0 right-4 ml-auto overflow-hidden rounded-b-md bg-zinc-100 leading-none transition-[translate,opacity] duration-200 ease-in-out ${
+      className={`container-shadow fixed top-0 right-4 ml-auto overflow-hidden rounded-b-md bg-zinc-800 leading-none transition-[translate,opacity] duration-200 ease-in-out ${
         show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
       onMouseLeave={handleShowChange(false)}
@@ -88,13 +88,13 @@ const DropDownNavButton: React.FC<
             <ul
               id={menuId}
               role="menu"
-              className="px-2 *:not-first:not-last:my-3"
+              className="px-2 *:not-first:not-last:my-2"
             >
               {React.Children.map(children, (child) => (
                 <li
                   role="menuitem"
                   onBlur={handleMenuItemBlur}
-                  className="group w-fit text-zinc-900 transition-colors duration-200 hover:text-zinc-800 focus:text-zinc-800"
+                  className="group w-fit leading-5"
                 >
                   {child}
                 </li>
