@@ -31,7 +31,7 @@ const DropDownNavButton: React.FC<
       }
       setShowMenu(false);
     },
-    []
+    [],
   );
 
   const handleButtonClick = React.useCallback(() => {
@@ -42,7 +42,7 @@ const DropDownNavButton: React.FC<
 
       if (menuElement) {
         const firstItemAnchor = menuElement.querySelector(
-          '[role="menuitem"] a'
+          '[role="menuitem"] a',
         ) as HTMLElement | null;
         firstItemAnchor?.focus();
       }
