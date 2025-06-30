@@ -6,9 +6,7 @@ interface HamburgerMenuProps {
 }
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
-  const animationClassNames = `transition-[width] duration-300 ${
-    animate ? "w-full" : "w-1/5"
-  }`;
+  const animationClassNames = `transition-[width] duration-300 ${animate ? "w-full" : "w-1/5"}`;
 
   return (
     <svg

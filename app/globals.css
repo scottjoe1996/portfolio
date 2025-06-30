@@ -14,7 +14,7 @@
 
 @layer components {
   .container-shadow {
-    @apply drop-shadow-zinc-400/50 drop-shadow-lg;
+    @apply drop-shadow-lg drop-shadow-zinc-400/50;
   }
 }
 

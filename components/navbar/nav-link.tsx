@@ -10,9 +10,9 @@ const NavLink: React.FC<React.PropsWithChildren<NavLinkProps>> = ({
   href,
 }) => {
   return (
-    <Link href={href} className="text-zinc-900 group outline-none text-lg">
+    <Link href={href} className="group text-lg text-zinc-900 outline-none">
       {children}
-      <div className="w-0 h-1 bg-zinc-900 transition-[width] ease-in-out duration-300 group-hover:w-full group-focus:w-full" />
+      <div className="h-1 w-0 bg-zinc-900 transition-[width] duration-300 ease-in-out group-hover:w-full group-focus:w-full" />
     </Link>
   );
 };
