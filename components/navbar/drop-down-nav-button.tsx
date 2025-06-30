@@ -69,7 +69,7 @@ const DropDownNavButton: React.FC<
       onMouseEnter={handleShowChange(true)}
     >
       <motion.div
-        className="box-content flex items-center justify-center p-3"
+        className="box-content flex items-center justify-center p-2.5"
         variants={{
           open: {
             width: size.width,
@@ -108,7 +108,7 @@ const DropDownNavButton: React.FC<
               aria-controls={menuId}
               aria-label="Open navigation menu"
             >
-              <HamburgerMenu size="2.5rem" animate={show} />
+              <HamburgerMenu size="2rem" animate={show} />
             </button>
           )}
         </div>

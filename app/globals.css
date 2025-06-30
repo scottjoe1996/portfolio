@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: theme("colors.zinc.300");
+  --background: theme("colors.zinc.200");
   --foreground: theme("colors.zinc.900");
 }
 
@@ -14,7 +14,7 @@
 
 @layer components {
   .container-shadow {
-    @apply drop-shadow-lg drop-shadow-zinc-400/50;
+    @apply drop-shadow-md drop-shadow-zinc-400/20;
   }
 }
 
