@@ -3,9 +3,11 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+import styles from "./home-section.module.css";
+
 const HomeSection: React.FC = () => {
   return (
-    <section className="flex w-full flex-row flex-wrap-reverse content-center items-center justify-center sm:h-[80dvh]">
+    <section className="flex min-h-[80vh] w-full flex-row flex-wrap-reverse content-center items-center justify-center">
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
@@ -26,8 +28,9 @@ const HomeSection: React.FC = () => {
             }}
             options={{
               delay: 35,
+              deleteSpeed: 35,
               wrapperClassName: "text-[#03A678] font-bold",
-              cursorClassName: "Typewriter__cursor text-[#03A678] font-bold",
+              cursorClassName: `text-[#03A678] font-bold ${styles.caret}`,
             }}
           />
         </p>

@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "@/components/navbar/navbar";
 import NavLink from "@/components/navbar/nav-link";
 
-import HomeSection from "./home-section";
+import HomeSection from "@/components/sections/home-section";
 
 const Portfolio: React.FC = () => {
   return (
