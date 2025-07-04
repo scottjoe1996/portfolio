@@ -5,8 +5,8 @@ import Typewriter from "typewriter-effect";
 
 const HomeSection: React.FC = () => {
   return (
-    <section className="flex w-full flex-row flex-wrap-reverse content-center items-center justify-center sm:h-[80dvh] lg:flex-nowrap">
-      <div className="lg:w-4xl">
+    <section className="flex w-full flex-row flex-wrap-reverse content-center items-center justify-center sm:h-[80dvh]">
+      <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
         <p className="min-h-40 text-4xl text-pretty">
@@ -32,7 +32,7 @@ const HomeSection: React.FC = () => {
           />
         </p>
       </div>
-      <div className="min-w-xs shrink basis-xl p-10">
+      <div className="max-w-xl min-w-2xs shrink grow basis-md p-10">
         <div className="aspect-square size-full rotate-10 bg-[#03A678]" />
       </div>
     </section>
