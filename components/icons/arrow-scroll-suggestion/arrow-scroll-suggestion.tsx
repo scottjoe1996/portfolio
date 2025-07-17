@@ -27,7 +27,7 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
         setShow(true);
       }
     }, 2000);
-  }, []);
+  }, [userHasScrolled]);
 
   return (
     <svg
