@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar/navbar";
 import NavLink from "@/components/navbar/nav-link";
 
 import HomeSection from "@/components/sections/home-section";
+import ArrowScrollSuggestion from "@/components/icons/arrow-scroll-suggestion/arrow-scroll-suggestion";
 
 const Portfolio: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Portfolio: React.FC = () => {
       </Navbar>
       <main className="flex w-full flex-col items-center justify-center">
         <HomeSection />
+        <ArrowScrollSuggestion size="4rem" />
         <section id="about" className="my-50 h-50">
           <h2>This is the about section</h2>
         </section>
