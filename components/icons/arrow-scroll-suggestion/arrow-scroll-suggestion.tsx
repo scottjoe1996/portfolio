@@ -9,12 +9,32 @@ interface ArrowScrollSuggestionProps {
 const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
   size,
 }) => {
+  const [show, setShow] = React.useState(false);
+  const [userHasScrolled, setUserHasScrolled] = React.useState(false);
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      setShow(false);
+      setUserHasScrolled(true);
+    },
+    { once: true },
+  );
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (!userHasScrolled) {
+        setShow(true);
+      }
+    }, 2000);
+  }, []);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 210 210"
       height={size}
-      className="container-shadow absolute top-[80vh] hidden rounded-full fill-white lg:inline"
+      className={`container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[80vh] opacity-100" : "top-[79vh] opacity-0"}`}
     >
       <defs>
         <style>
