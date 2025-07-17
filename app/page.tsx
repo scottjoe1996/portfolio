@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
         <NavLink href="#experience">experience</NavLink>
         <NavLink href="#contact">contact</NavLink>
       </Navbar>
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="relative flex w-full flex-col items-center justify-center">
         <HomeSection />
         <ArrowScrollSuggestion size="4rem" />
         <section id="about" className="my-50 h-50">
