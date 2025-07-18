@@ -34,10 +34,17 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-labelledby="arrow-title arrow-description"
       viewBox="0 0 210 210"
       height={size}
       className={`container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[80vh] opacity-100" : "top-[79vh] opacity-0"}`}
     >
+      <title id="arrow-title">Scroll Suggestion Arrow</title>
+      <desc id="arrow-description">
+        An arrow suggesting that there is more content to be seen upon
+        scrolling.
+      </desc>
       <defs>
         <style>
           {`.arrows {
