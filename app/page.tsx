@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
       </Navbar>
       <main className="relative flex w-full flex-col items-center justify-center">
         <HomeSection />
-        <ArrowScrollSuggestion size="4rem" />
+        <ArrowScrollSuggestion size="3rem" />
         <section id="about" className="my-50 h-50">
           <h2>This is the about section</h2>
         </section>

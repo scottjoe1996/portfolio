@@ -12,21 +12,23 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
   const [show, setShow] = React.useState(false);
   const [userHasScrolled, setUserHasScrolled] = React.useState(false);
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      setShow(false);
-      setUserHasScrolled(true);
-    },
-    { once: true },
-  );
+  React.useEffect(() => {
+    window.addEventListener(
+      "scroll",
+      () => {
+        setShow(false);
+        setUserHasScrolled(true);
+      },
+      { once: true },
+    );
+  }, []);
 
   React.useEffect(() => {
     setTimeout(() => {
       if (!userHasScrolled) {
         setShow(true);
       }
-    }, 2000);
+    }, 1500);
   }, [userHasScrolled]);
 
   return (
@@ -53,17 +55,41 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
           id="arrow-bottom"
           className="arrows"
           points="60 70 105 100 150 70"
-        />
+        >
+          <animate
+            attributeName="opacity"
+            values="1;0.25;1"
+            dur="2s"
+            repeatCount="indefinite"
+            begin="0s"
+          />
+        </polyline>
         <polyline
           id="arrow-middle"
           className="arrows"
           points="60 100 105 130 150 100"
-        />
+        >
+          <animate
+            attributeName="opacity"
+            values="1;0.25;1"
+            dur="2s"
+            repeatCount="indefinite"
+            begin="0.25s"
+          />
+        </polyline>
         <polyline
           id="arrow-top"
           className="arrows"
           points="60 130 105 160 150 130"
-        />
+        >
+          <animate
+            attributeName="opacity"
+            values="1;0.25;1"
+            dur="2s"
+            repeatCount="indefinite"
+            begin="0.5s"
+          />
+        </polyline>
       </g>
     </svg>
   );
