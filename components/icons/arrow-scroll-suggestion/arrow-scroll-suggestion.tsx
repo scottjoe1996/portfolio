@@ -10,26 +10,41 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
   size,
 }) => {
   const [show, setShow] = React.useState(false);
-  const [userHasScrolled, setUserHasScrolled] = React.useState(false);
+  const [delayedShowTimeoutId, setDelayedShowTimeoutId] =
+    React.useState<NodeJS.Timeout>();
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        setShow(false);
-        setUserHasScrolled(true);
-      },
-      { once: true },
-    );
-  }, []);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      if (!userHasScrolled) {
+  const delayedShow = React.useCallback(
+    () =>
+      setTimeout(() => {
         setShow(true);
-      }
-    }, 1500);
-  }, [userHasScrolled]);
+      }, 1500),
+    [],
+  );
+
+  const handleScroll = React.useCallback(() => {
+    const isAtTopOfPage = window.scrollY === 0;
+    clearTimeout(delayedShowTimeoutId);
+
+    if (isAtTopOfPage) {
+      setDelayedShowTimeoutId(delayedShow());
+      return;
+    }
+
+    setShow(false);
+  }, [delayedShow, delayedShowTimeoutId]);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  React.useEffect(() => {
+    const timeoutId = delayedShow();
+    setDelayedShowTimeoutId(timeoutId);
+  }, [delayedShow]);
 
   return (
     <svg
