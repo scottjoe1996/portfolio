@@ -73,43 +73,40 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
       </defs>
       <g id="arrow-scroll-suggestion">
         <circle id="container" cx="105" cy="105" r="100" />
-        <polyline
-          id="arrow-bottom"
-          className="arrows"
-          points="60 70 105 100 150 70"
-        >
+        <polyline className="arrows" points="60 70 105 100 150 70">
           <animate
+            id="arrow1"
             attributeName="opacity"
-            values="1;0.25;1"
-            dur="2s"
-            repeatCount="indefinite"
-            begin="0s"
+            values="1;0.5;1"
+            dur="1.35s"
+            begin="0s;arrow3.end-0.5"
+            calcMode="spline"
+            keyTimes="0; 0.5; 1"
+            keySplines=".42,0,.58,1; .42,0,.58,1"
           />
         </polyline>
-        <polyline
-          id="arrow-middle"
-          className="arrows"
-          points="60 100 105 130 150 100"
-        >
+        <polyline className="arrows" points="60 100 105 130 150 100">
           <animate
+            id="arrow2"
             attributeName="opacity"
-            values="1;0.25;1"
-            dur="2s"
-            repeatCount="indefinite"
-            begin="0.25s"
+            values="1;0.5;1"
+            dur="1.35s"
+            begin="arrow1.end-0.5"
+            calcMode="spline"
+            keyTimes="0; 0.5; 1"
+            keySplines=".42,0,.58,1; .42,0,.58,1"
           />
         </polyline>
-        <polyline
-          id="arrow-top"
-          className="arrows"
-          points="60 130 105 160 150 130"
-        >
+        <polyline className="arrows" points="60 130 105 160 150 130">
           <animate
+            id="arrow3"
             attributeName="opacity"
-            values="1;0.25;1"
-            dur="2s"
-            repeatCount="indefinite"
-            begin="0.5s"
+            values="1;0.5;1"
+            dur="1.35s"
+            begin="arrow2.end-0.5"
+            calcMode="spline"
+            keyTimes="0; 0.5; 1"
+            keySplines=".42,0,.58,1; .42,0,.58,1"
           />
         </polyline>
       </g>
