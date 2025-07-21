@@ -3,8 +3,9 @@ import React from "react";
 import Navbar from "@/components/navbar/navbar";
 import NavLink from "@/components/navbar/nav-link";
 
-import HomeSection from "@/components/sections/home-section";
+import HomeSection from "@/components/sections/home/home-section";
 import ArrowScrollSuggestion from "@/components/icons/arrow-scroll-suggestion/arrow-scroll-suggestion";
+import ContactSection from "@/components/sections/contact/contact-section";
 
 const Portfolio: React.FC = () => {
   return (
@@ -23,9 +24,7 @@ const Portfolio: React.FC = () => {
         <section id="experience" className="my-50 h-50">
           <h2>This is the experience section</h2>
         </section>
-        <section id="contact" className="my-50 h-50">
-          <h2>This is the contact section</h2>
-        </section>
+        <ContactSection />
       </main>
     </>
   );
