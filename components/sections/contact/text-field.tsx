@@ -2,14 +2,19 @@
 
 import React from "react";
 
-interface FieldProps {
+interface TextFieldProps {
   id: string;
   label: string;
   placeholder: string;
   type: React.HTMLInputTypeAttribute;
 }
 
-const Field: React.FC<FieldProps> = ({ id, label, placeholder, type }) => {
+const TextField: React.FC<TextFieldProps> = ({
+  id,
+  label,
+  placeholder,
+  type,
+}) => {
   return (
     <div className="mb-4">
       <label className="mb-2 block text-sm font-bold" htmlFor={id}>
@@ -25,4 +30,4 @@ const Field: React.FC<FieldProps> = ({ id, label, placeholder, type }) => {
   );
 };
 
-export default Field;
+export default TextField;

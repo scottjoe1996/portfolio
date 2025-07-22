@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Field from "./field";
+import TextField from "./text-field";
 
 const ContactSection: React.FC = () => {
   return (
@@ -10,8 +10,13 @@ const ContactSection: React.FC = () => {
       <div className="w-full max-w-2xl">
         <h2>Contact me</h2>
         <form>
-          <Field id="name" type="text" label="Name" placeholder="John Doe" />
-          <Field
+          <TextField
+            id="name"
+            type="text"
+            label="Name"
+            placeholder="John Doe"
+          />
+          <TextField
             id="email"
             type="email"
             label="Email"
