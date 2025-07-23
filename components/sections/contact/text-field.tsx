@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import FieldWrapper from "./field-wrapper";
 
 interface TextFieldProps {
   id: string;
@@ -16,17 +15,9 @@ const TextField: React.FC<TextFieldProps> = ({
   type,
 }) => {
   return (
-    <div className="mb-4">
-      <label className="mb-2 block text-sm font-bold" htmlFor={id}>
-        {label}
-      </label>
-      <input
-        className="w-full appearance-none rounded-md border-2 bg-white px-3 py-2 leading-relaxed"
-        id={id}
-        type={type}
-        placeholder={placeholder}
-      />
-    </div>
+    <FieldWrapper id={id} label={label}>
+      <input id={id} type={type} placeholder={placeholder} />
+    </FieldWrapper>
   );
 };
 
