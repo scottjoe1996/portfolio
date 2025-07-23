@@ -6,7 +6,10 @@ import TextField from "./text-field";
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="flex w-full items-center justify-center">
+    <section
+      id="contact"
+      className="flex w-full items-center justify-center bg-zinc-200 p-4"
+    >
       <div className="w-full max-w-2xl">
         <h2>Contact me</h2>
         <form>
