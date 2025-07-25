@@ -19,6 +19,7 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
       <textarea
         className="resize-none"
         id={id}
+        name={id}
         placeholder={placeholder}
         rows={rows}
       />

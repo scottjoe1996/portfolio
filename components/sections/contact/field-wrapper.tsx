@@ -13,7 +13,7 @@ const FieldWrapper: React.FC<React.PropsWithChildren<FieldWrapperProps>> = ({
   const StyleChildren = React.Children.map(children, (child) => {
     if (React.isValidElement<HTMLElement>(child)) {
       return React.cloneElement(child, {
-        className: `${child.props.className} w-full appearance-none rounded-md border-2 bg-white px-3 py-2 leading-relaxed focus:border-primary focus:outline focus:outline-primary`,
+        className: `${child.props.className ?? ""} w-full appearance-none rounded-md border-2 bg-white px-3 py-2 leading-relaxed focus:border-primary focus:outline focus:outline-primary`,
       });
     }
   });

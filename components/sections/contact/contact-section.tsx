@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import TextField from "./text-field";
@@ -11,7 +13,15 @@ const ContactSection: React.FC = () => {
     >
       <div className="w-full max-w-2xl">
         <h2>Contact me</h2>
-        <form>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            const formData = new FormData(event.currentTarget);
+            console.log(formData.get("name"));
+            console.log(formData.get("email"));
+            console.log(formData.get("message"));
+          }}
+        >
           <TextField
             id="name"
             type="text"
@@ -30,6 +40,12 @@ const ContactSection: React.FC = () => {
             placeholder="Hello there!"
             rows={6}
           />
+          <button
+            type="submit"
+            className="bg-foreground focus:ring-primary rounded-md px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:ring-4 focus:outline-none"
+          >
+            Send Email
+          </button>
         </form>
       </div>
     </section>

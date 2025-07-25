@@ -16,7 +16,7 @@ const TextField: React.FC<TextFieldProps> = ({
 }) => {
   return (
     <FieldWrapper id={id} label={label}>
-      <input id={id} type={type} placeholder={placeholder} />
+      <input id={id} name={id} type={type} placeholder={placeholder} />
     </FieldWrapper>
   );
 };
