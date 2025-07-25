@@ -3,11 +3,13 @@
 :root {
   --background: theme("colors.zinc.100");
   --foreground: theme("colors.zinc.900");
+  --primary: #03a678;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-mono: var(--font-mono);
 }
 

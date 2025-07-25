@@ -29,14 +29,14 @@ const HomeSection: React.FC = () => {
             options={{
               delay: 35,
               deleteSpeed: 35,
-              wrapperClassName: "text-[#03A678] font-bold",
-              cursorClassName: `text-[#03A678] font-bold ${styles.caret} font-sans`,
+              wrapperClassName: "text-primary font-bold",
+              cursorClassName: `text-primary font-bold ${styles.caret} font-sans`,
             }}
           />
         </p>
       </div>
       <div className="max-w-xl min-w-2xs shrink grow basis-md p-10">
-        <div className="aspect-square size-full rotate-10 bg-[#03A678]" />
+        <div className="bg-primary aspect-square size-full rotate-10" />
       </div>
     </section>
   );
