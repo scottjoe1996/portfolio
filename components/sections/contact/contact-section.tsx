@@ -1,6 +1,7 @@
 import React from "react";
 
 import TextField from "./text-field";
+import TextareaField from "./textarea-field";
 
 const ContactSection: React.FC = () => {
   return (
@@ -22,6 +23,12 @@ const ContactSection: React.FC = () => {
             type="email"
             label="Email"
             placeholder="john@doe.co.uk"
+          />
+          <TextareaField
+            id="message"
+            label="Message"
+            placeholder="Hello there!"
+            rows={6}
           />
         </form>
       </div>
