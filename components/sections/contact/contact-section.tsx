@@ -10,19 +10,28 @@ import TextField from "./text-field";
 import TextareaField from "./textarea-field";
 
 const formSchema = z.object({
-  name: z.string().min(2).max(50).nonoptional(),
-  email: z.email().nonoptional(),
-  message: z.string().min(2).max(500).nonoptional(),
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters" })
+    .max(50, { message: "Name must be at most 50 characters" })
+    .nonoptional(),
+  email: z
+    .email({ message: "Please enter a valid email address" })
+    .nonoptional(),
+  message: z
+    .string()
+    .min(2, { message: "Message must be at least 2 characters" })
+    .max(500, { message: "Message must be at most 500 characters" })
+    .nonoptional(),
 });
 
 const ContactSection: React.FC = () => {
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
   });
 
   return (
@@ -44,6 +53,7 @@ const ContactSection: React.FC = () => {
             type="text"
             label="Name"
             placeholder="John Doe"
+            error={errors.name?.message}
             {...register("name")}
           />
           <TextField
@@ -51,6 +61,7 @@ const ContactSection: React.FC = () => {
             type="email"
             label="Email"
             placeholder="john@doe.co.uk"
+            error={errors.email?.message}
             {...register("email")}
           />
           <TextareaField
@@ -58,6 +69,7 @@ const ContactSection: React.FC = () => {
             label="Message"
             placeholder="Hello there!"
             rows={6}
+            error={errors.message?.message}
             {...register("message")}
           />
           <button

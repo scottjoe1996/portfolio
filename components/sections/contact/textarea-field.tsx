@@ -12,12 +12,13 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
   placeholder,
   rows,
   autoComplete,
+  error,
   ...rest
 }) => {
   return (
-    <FieldWrapper id={id} label={label}>
+    <FieldWrapper id={id} label={label} error={error}>
       <textarea
-        className="resize-none"
+        className="resize-none align-bottom"
         id={id}
         placeholder={placeholder}
         autoComplete={autoComplete ? "on" : "off"}

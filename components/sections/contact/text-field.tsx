@@ -8,6 +8,7 @@ export interface BaseFieldProps extends Partial<UseFormRegisterReturn> {
   label: string;
   placeholder: string;
   autoComplete?: boolean;
+  error?: string;
 }
 
 interface TextFieldProps extends BaseFieldProps {
@@ -20,10 +21,11 @@ const TextField: React.FC<TextFieldProps> = ({
   placeholder,
   type,
   autoComplete,
+  error,
   ...rest
 }) => {
   return (
-    <FieldWrapper id={id} label={label}>
+    <FieldWrapper id={id} label={label} error={error}>
       <input
         id={id}
         type={type}
