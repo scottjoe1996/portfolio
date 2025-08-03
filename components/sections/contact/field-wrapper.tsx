@@ -32,7 +32,10 @@ const FieldWrapper: React.FC<React.PropsWithChildren<FieldWrapperProps>> = ({
       </label>
       {StyleChildren}
       {error && (
-        <p id={errorDescriptionId} className="mt-1 text-sm text-red-600">
+        <p
+          id={errorDescriptionId}
+          className="mt-1 text-sm text-red-600 transition-[translate,opacity] duration-400 ease-in-out starting:-translate-y-1/2 starting:opacity-0"
+        >
           {error}
         </p>
       )}
