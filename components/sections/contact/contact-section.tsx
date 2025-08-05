@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import sendMessage from "@/actions/message";
 
 import TextField from "./text-field";
 import TextareaField from "./textarea-field";
@@ -43,9 +44,7 @@ const ContactSection: React.FC = () => {
         <h2>Contact me</h2>
         <form
           onSubmit={handleSubmit((inputs) => {
-            console.log(inputs.name);
-            console.log(inputs.email);
-            console.log(inputs.message);
+            sendMessage(inputs.name, inputs.email, inputs.message);
           })}
         >
           <TextField
