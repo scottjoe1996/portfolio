@@ -44,7 +44,9 @@ const ContactSection: React.FC = () => {
         <h2>Contact me</h2>
         <form
           onSubmit={handleSubmit((inputs) => {
-            sendMessage(inputs.name, inputs.email, inputs.message);
+            sendMessage(inputs.name, inputs.email, inputs.message).then(
+              (response) => console.log(response),
+            );
           })}
         >
           <TextField
