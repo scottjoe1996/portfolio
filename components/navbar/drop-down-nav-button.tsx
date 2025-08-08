@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import React from "react";
-import HamburgerMenu from "../icons/hamburger-menu/hamburger-menu";
+import HamburgerMenu from "../icons/hamburger-menu";
 
 interface DropDownNavButtonProps {
   show: boolean;

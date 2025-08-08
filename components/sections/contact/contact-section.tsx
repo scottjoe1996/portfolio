@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
           />
           <button
             type="submit"
-            className="bg-foreground focus:ring-primary rounded-md px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:ring-4 focus:outline-none"
+            className="bg-foreground focus:ring-primary rounded-md px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none"
           >
             Send Email
           </button>

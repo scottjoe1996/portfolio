@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/navbar";
 import NavLink from "@/components/navbar/nav-link";
 
 import HomeSection from "@/components/sections/home/home-section";
-import ArrowScrollSuggestion from "@/components/icons/arrow-scroll-suggestion/arrow-scroll-suggestion";
+import ArrowScrollSuggestion from "@/components/icons/arrow-scroll-suggestion";
 import ContactSection from "@/components/sections/contact/contact-section";
 
 const Portfolio: React.FC = () => {
