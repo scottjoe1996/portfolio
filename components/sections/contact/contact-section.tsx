@@ -6,6 +6,7 @@ import z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import sendMessage from "@/actions/message";
+import LoadingSpinner from "@/components/icons/loading-spinner";
 
 import TextField from "./text-field";
 import TextareaField from "./textarea-field";
@@ -75,8 +76,9 @@ const ContactSection: React.FC = () => {
           />
           <button
             type="submit"
-            className="bg-foreground focus:ring-primary rounded-md px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none"
+            className="bg-foreground focus:ring-primary flex items-center justify-between gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none"
           >
+            <LoadingSpinner size="1.5rem" />
             Send Email
           </button>
         </form>
