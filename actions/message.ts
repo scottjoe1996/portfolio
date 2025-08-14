@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const RESEND_CLIENT = new Resend(process.env.RESEND_API_KEY!);
 
-interface SendMessageResponse {
+export interface SendMessageResponse {
   success: boolean;
 }
 

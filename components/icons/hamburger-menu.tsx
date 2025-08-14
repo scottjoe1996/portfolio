@@ -20,8 +20,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
             x="0"
             y="0"
             height="42.52"
-            rx="21.26"
-            ry="21.26"
+            rx="20"
+            ry="20"
             className={`${animationClassNames} delay-75`}
           />
         </g>
@@ -30,8 +30,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
             x="0"
             y="70.87"
             height="42.52"
-            rx="21.26"
-            ry="21.26"
+            rx="20"
+            ry="20"
             className={`${animationClassNames} delay-125`}
           />
         </g>
@@ -40,8 +40,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
             x="0"
             y="141.73"
             height="42.52"
-            rx="21.26"
-            ry="21.26"
+            rx="20"
+            ry="20"
             className={`${animationClassNames} delay-175`}
           />
         </g>
