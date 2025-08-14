@@ -7,6 +7,7 @@ export interface BaseFieldProps extends Partial<UseFormRegisterReturn> {
   id: string;
   label: string;
   placeholder: string;
+  disabled?: boolean;
   autoComplete?: boolean;
   error?: string;
 }
@@ -21,6 +22,7 @@ const TextField: React.FC<TextFieldProps> = ({
   placeholder,
   type,
   autoComplete,
+  disabled = false,
   error,
   ...rest
 }) => {
@@ -31,6 +33,7 @@ const TextField: React.FC<TextFieldProps> = ({
         type={type}
         placeholder={placeholder}
         autoComplete={autoComplete ? "on" : "off"}
+        disabled={disabled}
         {...rest}
       />
     </FieldWrapper>

@@ -19,7 +19,7 @@ const FieldWrapper: React.FC<React.PropsWithChildren<FieldWrapperProps>> = ({
       React.isValidElement<React.InputHTMLAttributes<HTMLInputElement>>(child)
     ) {
       return React.cloneElement(child, {
-        className: `${child.props.className ?? ""} w-full appearance-none rounded-md border-2 bg-white px-3 py-2 leading-relaxed ${error ? "border-red-600" : ""} focus:border-primary focus:outline-2 focus:outline-primary`,
+        className: `${child.props.className ?? ""} w-full appearance-none rounded-md border-2 bg-white px-3 py-2 leading-relaxed ${error ? "border-red-600" : ""} focus:border-primary focus:outline-2 focus:outline-primary disabled:cursor-not-allowed disabled:text-zinc-400`,
         "aria-describedby": errorDescriptionId,
       });
     }

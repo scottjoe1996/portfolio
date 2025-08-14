@@ -12,6 +12,7 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
   placeholder,
   rows,
   autoComplete,
+  disabled = false,
   error,
   ...rest
 }) => {
@@ -22,6 +23,7 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
         id={id}
         placeholder={placeholder}
         autoComplete={autoComplete ? "on" : "off"}
+        disabled={disabled}
         rows={rows}
         {...rest}
       />
