@@ -17,18 +17,18 @@ const ContactSection: React.FC = () => {
       className="flex w-full items-center justify-center rounded-t-4xl bg-zinc-200 p-4"
     >
       <div className="w-full max-w-4xl">
-        <h2>Contact me</h2>
+        <h2 className="mb-6 text-5xl font-bold">Contact me</h2>
         <div className="flex min-h-[440px] flex-col items-center justify-center gap-2">
           {formState === "SENT" ? (
             <>
-              <p className="text-5xl font-bold">Email recieved!</p>
+              <p className="text-4xl font-semibold">Email received!</p>
               <p>
                 Thanks for reaching out, I'll get back to you as soon as I can!
               </p>
             </>
           ) : formState === "ERROR" ? (
             <>
-              <p className="text-5xl font-bold">Error!</p>
+              <p className="text-4xl font-semibold">Error!</p>
               <p>
                 There was an error sending your message. Please try again later.
               </p>
