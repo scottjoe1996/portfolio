@@ -5,6 +5,7 @@ import React from "react";
 import sendMessage from "@/actions/message";
 
 import ContactForm from "./contact-form";
+import SectionHeading from "../common/section-heading";
 
 type FormState = "INITIAL" | "SENT" | "ERROR";
 
@@ -17,7 +18,7 @@ const ContactSection: React.FC = () => {
       className="flex w-full items-center justify-center rounded-t-4xl bg-zinc-200 p-4"
     >
       <div className="w-full max-w-4xl">
-        <h2 className="mb-6 text-5xl font-bold">Contact me</h2>
+        <SectionHeading title="Contact me" />
         <div className="flex min-h-[440px] flex-col items-center justify-center gap-2">
           {formState === "SENT" ? (
             <>
