@@ -24,7 +24,8 @@ const ContactSection: React.FC = () => {
             <>
               <p className="text-4xl font-semibold">Email received!</p>
               <p>
-                Thanks for reaching out, I'll get back to you as soon as I can!
+                Thanks for reaching out, I&apos;ll get back to you as soon as I
+                can!
               </p>
             </>
           ) : formState === "ERROR" ? (
