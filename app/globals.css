@@ -3,7 +3,7 @@
 :root {
   --background: theme("colors.zinc.100");
   --foreground: theme("colors.zinc.900");
-  --primary: #03a678;
+  --primary: theme("colors.emerald.500");
 }
 
 @theme inline {
