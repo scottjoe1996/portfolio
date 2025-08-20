@@ -17,13 +17,16 @@ const ContactSection: React.FC = () => {
       id="contact"
       className="flex w-full items-center justify-center rounded-t-4xl bg-zinc-200 p-4"
     >
-      <div className="w-full max-w-7xl">
+      <div className="mb-4 w-full max-w-7xl">
         <SectionHeading title="Contact me" />
         <div className="flex min-h-[440px] items-center justify-center gap-2">
           {formState === "INITIAL" ? (
             <>
-              <aside className="hidden flex-[1] md:inline">
-                <p>
+              <aside className="hidden flex-[1] text-center md:inline">
+                <p className="mb-2 text-2xl font-semibold">
+                  Let&apos;s Collaborate!
+                </p>
+                <p className="text-balance">
                   Feel free to contact me anytime. I&apos;ll get back to you as
                   soon as I can!
                 </p>
