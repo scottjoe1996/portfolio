@@ -5,7 +5,7 @@ interface Duration {
   endYear?: number;
 }
 
-interface ExperienceCardProps {
+export interface ExperienceCardProps {
   role: string;
   description: string;
   skillsGained: string[];
@@ -19,9 +19,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   duration,
 }) => {
   return (
-    <div className="bg-foreground flex flex-[1] flex-row gap-2 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
-      <p className="flex-1/3 text-sm leading-6 font-semibold text-nowrap">{`${duration.startYear} — ${duration.endYear ?? "PRESENT"}`}</p>
-      <div className="flex-2/3">
+    <div className="bg-foreground flex-[1 1 0] flex flex-row gap-4 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
+      <span className="inline w-30 text-sm leading-6 font-semibold text-nowrap md:hidden">{`${duration.startYear} — ${duration.endYear ?? "PRESENT"}`}</span>
+      <div>
         <p>{role}</p>
         <p className="mb-2 text-sm text-zinc-400">{description}</p>
         <div className="flex gap-2">
