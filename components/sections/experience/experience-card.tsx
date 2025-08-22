@@ -19,7 +19,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   duration,
 }) => {
   return (
-    <div className="bg-foreground flex-[1 1 0] flex flex-row gap-4 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
+    <div className="bg-foreground flex flex-1 flex-row gap-4 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
       <span className="inline w-30 text-sm leading-6 font-semibold text-nowrap md:hidden">{`${duration.startYear} — ${duration.endYear ?? "PRESENT"}`}</span>
       <div>
         <p>{role}</p>
