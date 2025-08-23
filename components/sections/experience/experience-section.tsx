@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/section-heading";
 import ExperienceCard, { ExperienceCardProps } from "./experience-card";
+import { createDurationText } from "./duration";
 
 const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   {
@@ -33,8 +34,14 @@ const ExperienceSection: React.FC = () => {
               <div className="flex-1">
                 <ExperienceCard {...props} />
               </div>
-              <span className="bg-primary border-background hidden size-5 rounded-full border-4 md:inline" />
-              <div className="hidden flex-1 md:inline" />
+              <div className="bg-primary border-background hidden size-5 rounded-full border-4 md:inline" />
+              <div className="hidden flex-1 md:inline">
+                <p
+                  className={`${isLeftSide ? "text-left" : "text-right"} text-sm font-semibold text-zinc-500`}
+                >
+                  {createDurationText(props.duration)}
+                </p>
+              </div>
             </li>
           );
         })}

@@ -1,9 +1,5 @@
 import React from "react";
-
-interface Duration {
-  startYear: number;
-  endYear?: number;
-}
+import { createDurationText, Duration } from "./duration";
 
 export interface ExperienceCardProps {
   role: string;
@@ -20,7 +16,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 }) => {
   return (
     <div className="bg-foreground flex flex-1 flex-row gap-4 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
-      <span className="inline w-30 text-sm leading-6 font-semibold text-nowrap md:hidden">{`${duration.startYear} — ${duration.endYear ?? "PRESENT"}`}</span>
+      <span className="inline w-30 text-sm leading-6 font-semibold text-nowrap md:hidden">
+        {createDurationText(duration)}
+      </span>
       <div>
         <p>{role}</p>
         <p className="mb-2 text-sm text-zinc-400">{description}</p>
