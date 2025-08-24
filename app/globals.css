@@ -11,6 +11,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-mono: var(--font-mono);
+  --breakpoint-xs: 30rem;
 }
 
 @layer components {
