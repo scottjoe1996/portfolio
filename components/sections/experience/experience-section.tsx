@@ -7,7 +7,7 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   {
     role: "Smartnumbers - Senior Software Developer",
     description:
-      "I developed a range of frontend and backend applications that empowered customers to manage their call delivery and fraud prevention solutions through a self service platform. I architectured high-quality, scalable solutions across multiple developement teams and by collaborating with design and product I ensured that these features were fit for purpose and met user needs.",
+      "Developed a range of frontend and backend applications that empowered customers to manage their call delivery and fraud prevention solutions through a self service platform. I architectured high-quality, scalable solutions across multiple developement teams and by collaborating with design and product I ensured that these features were fit for purpose and met user needs.",
     skillsGained: [
       "Typescript",
       "NodeJS",
@@ -22,14 +22,31 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   },
   {
     role: "KCOM - Fullstack Software Consultant",
-    description: "TODO",
-    skillsGained: [],
+    description:
+      "Created custom design framework for the communications provider KCOM, speaking directly with high level stakeholders on the importance of user centered design, I helped influence KCOM to commit to the project and send stakeholders to take part in our workshops within a week.",
+    skillsGained: [
+      "Typescript",
+      "HTML & SCSS",
+      "StencilJS",
+      "Storybook",
+      "Puppeteer",
+      "UI & UX Design",
+    ],
     duration: { startYear: 2019, endYear: 2020 },
   },
   {
     role: "Seed Software - Fullstack Software Consultant",
-    description: "TODO",
-    skillsGained: [],
+    description:
+      "Led the transformation of a development team building a nationally used fire service risk management system. Improved deployment reliability by raising test coverage from 5% to 78%, and eliminated continuous delivery failure within two sprints.",
+    skillsGained: [
+      "C#",
+      "ASP.NET",
+      "Razor",
+      "HTML & CSS",
+      "Javascript",
+      "Team Management",
+      "Agile",
+    ],
     duration: { startYear: 2019, endYear: 2020 },
   },
   {
@@ -68,7 +85,7 @@ const ExperienceSection: React.FC = () => {
           return (
             <li
               key={props.role}
-              className={`flex ${isLeftSide ? "flex-row" : "flex-row-reverse"} z-1 items-center gap-6`}
+              className={`flex ${isLeftSide ? "flex-row" : "flex-row-reverse"} items-center gap-6`}
             >
               <div className="flex-1">
                 <ExperienceCard {...props} />
@@ -84,7 +101,7 @@ const ExperienceSection: React.FC = () => {
             </li>
           );
         })}
-        <div className="absolute left-1/2 hidden h-full w-1 translate-x-[-50%] bg-zinc-300 md:block"></div>
+        <div className="absolute left-1/2 -z-1 hidden h-full w-1 translate-x-[-50%] bg-zinc-300 md:block"></div>
       </ul>
     </section>
   );
