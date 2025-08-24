@@ -20,10 +20,28 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
     duration: { startYear: 2020 },
   },
   {
-    role: "Fullstack Software Consultant",
-    description: "Wow would you look at that I've got experience!",
-    skillsGained: ["Typescript", "AWS", "Angular", "Java"],
+    role: "KCOM - Fullstack Software Consultant",
+    description: "TODO",
+    skillsGained: [],
+    duration: { startYear: 2019, endYear: 2020 },
+  },
+  {
+    role: "Seed Software - Fullstack Software Consultant",
+    description: "TODO",
+    skillsGained: [],
+    duration: { startYear: 2019, endYear: 2020 },
+  },
+  {
+    role: "Lampada - Junior Software Consultant",
+    description: "TODO",
+    skillsGained: [],
     duration: { startYear: 2018, endYear: 2019 },
+  },
+  {
+    role: "University of Hull - Masters of Mathematics",
+    description: "TODO",
+    skillsGained: [],
+    duration: { startYear: 2014, endYear: 2018 },
   },
 ];
 
