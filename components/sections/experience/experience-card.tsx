@@ -20,13 +20,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         {createDurationText(duration)}
       </span>
       <div>
-        <p>{role}</p>
+        <p className="mb-2">{role}</p>
         <p className="mb-2 text-sm text-zinc-400">{description}</p>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {skillsGained.map((skill) => (
             <div
               key={skill}
-              className="border-primary rounded-2xl border-2 bg-emerald-950 px-2 py-1 text-sm font-semibold text-nowrap"
+              className="border-primary rounded-2xl border-1 bg-emerald-900 px-2 py-1 text-sm text-nowrap text-emerald-100"
             >
               {skill}
             </div>

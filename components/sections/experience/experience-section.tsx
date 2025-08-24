@@ -5,9 +5,18 @@ import { createDurationText } from "./duration";
 
 const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   {
-    role: "Senior Software Engineer",
-    description: "Wow would you look at that I've got experience!",
-    skillsGained: ["Typescript", "AWS", "React", "Material UI"],
+    role: "Smartnumbers - Senior Software Developer",
+    description:
+      "I developed a range of frontend and backend applications that empowered customers to manage their call delivery and fraud prevention solutions through a self service platform. I architectured high-quality, scalable solutions across multiple developement teams and by collaborating with design and product I ensured that these features were fit for purpose and met user needs.",
+    skillsGained: [
+      "Typescript",
+      "NodeJS",
+      "GraphQL",
+      "React",
+      "Storybook",
+      "Playwright",
+      "AWS",
+    ],
     duration: { startYear: 2020 },
   },
   {
@@ -29,7 +38,7 @@ const ExperienceSection: React.FC = () => {
           return (
             <li
               key={props.role}
-              className={`flex ${isLeftSide ? "flex-row" : "flex-row-reverse"} z-1 items-center gap-8`}
+              className={`flex ${isLeftSide ? "flex-row" : "flex-row-reverse"} z-1 items-center gap-6`}
             >
               <div className="flex-1">
                 <ExperienceCard {...props} />
