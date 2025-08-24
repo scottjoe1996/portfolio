@@ -15,6 +15,7 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
       "React",
       "Storybook",
       "Playwright",
+      "CircleCI",
       "AWS",
     ],
     duration: { startYear: 2020 },
@@ -33,8 +34,19 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   },
   {
     role: "Lampada - Junior Software Consultant",
-    description: "TODO",
-    skillsGained: [],
+    description:
+      "I spent a year in a postgraduate academy learning the fundamentals of software development and the product life cycle. From discovery to release, I gained hands on experience developing an event planning solutions for the University of Hull.",
+    skillsGained: [
+      "Typescript",
+      "Angular",
+      "Java",
+      "Dropwizard",
+      "REST",
+      "TravisCI",
+      "AWS",
+      "Agile",
+      "User Research",
+    ],
     duration: { startYear: 2018, endYear: 2019 },
   },
   {
