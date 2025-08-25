@@ -7,7 +7,7 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   {
     role: "Smartnumbers - Senior Software Developer",
     description:
-      "Developed a range of frontend and backend applications that empowered customers to manage their call delivery and fraud prevention solutions through a self service platform. I architectured high-quality, scalable solutions across multiple developement teams and by collaborating with design and product I ensured that these features were fit for purpose and met user needs.",
+      "Developed a range of frontend and backend applications that empowered customers to manage their call delivery and fraud prevention solutions through a self service platform. I architectured high-quality, scalable solutions across multiple development teams and by collaborating with design and product I ensured that these features were fit for purpose and met our user's needs.",
     skillsGained: [
       "Typescript",
       "NodeJS",
@@ -23,7 +23,7 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   {
     role: "KCOM - Fullstack Software Consultant",
     description:
-      "Created custom design framework for the communications provider KCOM, speaking directly with high level stakeholders on the importance of user centered design, I helped influence KCOM to commit to the project and send stakeholders to take part in our workshops within a week.",
+      "Created a custom design framework for the communications provider KCOM, speaking directly with high level stakeholders on the importance of user centered design, I helped influence KCOM to commit to the project and send stakeholders to take part in our workshops within a week.",
     skillsGained: [
       "Typescript",
       "HTML & SCSS",
@@ -68,8 +68,16 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
   },
   {
     role: "University of Hull - Masters of Mathematics",
-    description: "TODO",
-    skillsGained: [],
+    description:
+      "Researched and developed computational methods which I applied to the study of dark energy through analysis of Type Ia supernova data. I designed and implemented scalable mathematical models to solve large linear systems, validated results against observational datasets and collaborated with other students to ensure my findings were as precise as possible.",
+    skillsGained: [
+      "Critical Thinking",
+      "Analysis",
+      "Problem Solving",
+      "Logical Reasoning",
+      "Communication",
+      "Data Interpretation",
+    ],
     duration: { startYear: 2014, endYear: 2018 },
   },
 ];

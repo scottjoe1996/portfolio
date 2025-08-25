@@ -18,7 +18,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
   return (
     <div className="bg-foreground flex flex-1 flex-row gap-4 rounded-md p-3 text-zinc-50 shadow-md shadow-zinc-600/30">
-      <span className="xs:inline hidden w-30 text-sm leading-6 font-semibold text-nowrap text-zinc-300 md:hidden">
+      <span className="xs:inline hidden min-w-28 text-sm leading-6 font-semibold text-nowrap text-zinc-300 md:hidden">
         {durationText}
       </span>
       <div>
