@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="flex w-full items-center justify-center rounded-t-4xl bg-zinc-200 p-4"
+      className="flex w-full items-center justify-center bg-zinc-200 p-4"
     >
       <div className="mb-4 w-full max-w-7xl">
         <SectionHeading title="Contact me" />
