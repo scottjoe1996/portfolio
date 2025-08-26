@@ -1,16 +1,14 @@
 import React from "react";
-import SectionHeading from "../common/section-heading";
+
+import SectionWrapper from "../section-wrapper";
 
 const AboutSection: React.FC = () => {
   return (
-    <section
+    <SectionWrapper
       id="about"
-      className="flex w-full items-center justify-center bg-zinc-700 p-4"
-    >
-      <div className="mb-4 w-full max-w-7xl">
-        <SectionHeading title="About Me" />
-      </div>
-    </section>
+      title="About Me"
+      bgColor="bg-zinc-700"
+    ></SectionWrapper>
   );
 };
 
