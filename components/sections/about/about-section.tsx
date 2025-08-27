@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
     <SectionWrapper
       id="about"
       title="About Me"
-      sectionClasses={["bg-foreground", "text-zinc-50"]}
+      sectionClasses={["bg-foreground", "text-zinc-50", "min-h-screen"]}
     >
       <div className="flex justify-between">
         <div className="w-full">

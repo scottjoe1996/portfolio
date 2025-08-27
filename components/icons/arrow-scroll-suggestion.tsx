@@ -53,7 +53,7 @@ const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
       aria-labelledby="arrow-title arrow-description"
       viewBox="0 0 210 210"
       height={size}
-      className={`container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[80vh] opacity-100" : "top-[79vh] opacity-0"}`}
+      className={`container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[82vh] opacity-100" : "top-[81vh] opacity-0"}`}
     >
       <title id="arrow-title">Scroll Suggestion Arrow</title>
       <desc id="arrow-description">
