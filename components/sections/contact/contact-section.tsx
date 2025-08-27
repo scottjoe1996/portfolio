@@ -13,7 +13,11 @@ const ContactSection: React.FC = () => {
   const [formState, setFormState] = React.useState<FormState>("INITIAL");
 
   return (
-    <SectionWrapper id="contact" title="Contact me" bgColor="bg-zinc-200">
+    <SectionWrapper
+      id="contact"
+      title="Contact me"
+      sectionClasses={["bg-zinc-200"]}
+    >
       <div className="flex min-h-[440px] items-center justify-center gap-2">
         {formState === "INITIAL" ? (
           <>
