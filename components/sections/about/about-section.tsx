@@ -1,6 +1,7 @@
 import React from "react";
 
 import SectionWrapper from "../section-wrapper";
+import SkillChip from "@/components/chips/skill-chip";
 
 const TOTAL_SKILLS = [
   "Typescript",
@@ -51,12 +52,7 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="hidden w-full flex-wrap content-center items-center justify-center gap-2 md:flex">
           {TOTAL_SKILLS.map((skill) => (
-            <div
-              key={skill}
-              className="border-primary rounded-md border-1 bg-emerald-900 px-4 py-1 text-nowrap text-emerald-100"
-            >
-              {skill}
-            </div>
+            <SkillChip key={skill} skill={skill} size="large" />
           ))}
         </div>
       </div>
