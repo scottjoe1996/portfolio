@@ -2,6 +2,21 @@ import React from "react";
 
 import SectionWrapper from "../section-wrapper";
 
+const TOTAL_SKILLS = [
+  "Typescript",
+  "NodeJS",
+  "GraphQL",
+  "React",
+  "HTML & CSS",
+  "Storybook",
+  "Playwright",
+  "UI & UX Design",
+  "CircleCI",
+  "AWS",
+  "Agile",
+  "User Research",
+];
+
 const AboutSection: React.FC = () => {
   return (
     <SectionWrapper
@@ -34,7 +49,16 @@ const AboutSection: React.FC = () => {
             love to connect and explore how we can work together.
           </p>
         </div>
-        <div className="h-50 w-full bg-amber-500">TODO</div>
+        <div className="hidden w-full flex-wrap content-center items-center justify-center gap-2 md:flex">
+          {TOTAL_SKILLS.map((skill) => (
+            <div
+              key={skill}
+              className="border-primary rounded-md border-1 bg-emerald-900 px-4 py-1 text-nowrap text-emerald-100"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );

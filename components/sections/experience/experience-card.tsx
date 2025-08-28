@@ -33,7 +33,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           {skillsGained.map((skill) => (
             <div
               key={skill}
-              className="border-primary rounded-2xl border-1 bg-emerald-900 px-2 py-1 text-sm text-nowrap text-emerald-100"
+              className="border-primary rounded-md border-1 bg-emerald-900 px-2 py-1 text-sm text-nowrap text-emerald-100"
             >
               {skill}
             </div>
