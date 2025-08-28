@@ -16,7 +16,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   return (
     <section
       id={id}
-      className={`flex w-full items-center justify-center p-4 ${sectionClasses?.join(" ")}`}
+      className={`flex w-full items-center justify-center px-4 py-30 ${sectionClasses?.join(" ")}`}
     >
       <div className="mb-4 w-full max-w-7xl">
         <SectionHeading title={title} />
