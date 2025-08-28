@@ -84,7 +84,11 @@ const EXPERIENCE_CARD_PROPS: ExperienceCardProps[] = [
 
 const ExperienceSection: React.FC = () => {
   return (
-    <SectionWrapper id="experience" title="Experience">
+    <SectionWrapper
+      id="experience"
+      title="Experience"
+      sectionClasses={["py-30"]}
+    >
       <ul className="relative flex flex-col justify-between gap-4 md:gap-16">
         {EXPERIENCE_CARD_PROPS.map((props, index) => {
           const isLeftSide = index % 2 === 0;
