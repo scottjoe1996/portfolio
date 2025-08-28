@@ -7,30 +7,31 @@ const AboutSection: React.FC = () => {
     <SectionWrapper
       id="about"
       title="About Me"
-      sectionClasses={["bg-foreground", "text-zinc-50", "min-h-screen"]}
+      sectionClasses={["bg-zinc-800", "text-zinc-50", "min-h-screen"]}
     >
       <div className="flex justify-between">
         <div className="w-full">
           <p className="mb-6">
             I&apos;m a passionate full stack developer with an enthusiasm for
-            crafting <b>exceptional digital experiences.</b> I have professional
-            experience working with Java, TypeScript, React and Angular; all
-            being used in tandem with AWS to build scalable and secure cloud
-            solutions.
+            crafting{" "}
+            <b className="text-emerald-500">exceptional digital experiences.</b>{" "}
+            I have professional experience working with Java, TypeScript, React
+            and Angular; all being used in tandem with AWS to build scalable and
+            secure cloud solutions.
           </p>
           <p>
             Dedicated to creating intuitive and visually appealing user
             interfaces. My UX design skills allow me to bridge the gap between
-            functionality and aesthetics. My design decisions are always
-            <b>powered by data</b> received through thorough user research,
-            ensuring that the resulting UI provides a delightful user
-            experience.
+            functionality and aesthetics. My design decisions are always{" "}
+            <b className="text-emerald-500">powered by data</b>, ensuring that
+            users get the best experience possible.
           </p>
           <p className="mt-6">
-            In an ever-evolving industry, I believe in the power of
-            collaboration and continuous learning. Together, we can create
-            solutions that make a positive impact on the world and push the
-            boundaries of what&apos;s possible in the digital realm.
+            In an ever evolving industry, I believe in the{" "}
+            <b className="text-emerald-500">power of collaboration</b> and
+            continuous learning. Together, we can create solutions that make a
+            positive impact on the world and if you share this vision, I would
+            love to connect and explore how we can work together.
           </p>
         </div>
         <div className="h-50 w-full bg-amber-500">TODO</div>
