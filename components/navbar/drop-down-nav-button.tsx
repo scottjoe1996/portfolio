@@ -108,7 +108,7 @@ const DropDownNavButton: React.FC<
               aria-controls={menuId}
               aria-label="Open navigation menu"
             >
-              <HamburgerMenu size="2rem" animate={show} />
+              <HamburgerMenu size="2rem" open={show} />
             </button>
           )}
         </div>

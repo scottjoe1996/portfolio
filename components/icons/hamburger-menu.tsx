@@ -2,11 +2,11 @@ import React from "react";
 
 interface HamburgerMenuProps {
   size: string;
-  animate: boolean;
+  open?: boolean;
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, animate }) => {
-  const animationClassNames = `transition-[width] duration-300 ${animate ? "w-full" : "w-1/5"}`;
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, open = true }) => {
+  const animationClassNames = `transition-[width] duration-300 ${open ? "w-full" : "w-1/5"}`;
 
   return (
     <svg
