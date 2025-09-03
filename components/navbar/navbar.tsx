@@ -32,7 +32,12 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
         className="container-shadow bg-foreground m-4 box-border flex items-center justify-between rounded-md px-8 pt-5 pb-4 sm:justify-end sm:gap-16"
         inert={showNavDropDown}
       >
-        {children}
+        <div className="self-start text-white sm:hidden">
+          TODO:HAMBURGER MENU
+        </div>
+        {React.Children.map(children, (child) => (
+          <div className="hidden sm:block">{child}</div>
+        ))}
       </nav>
       <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
     </>
