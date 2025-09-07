@@ -9,6 +9,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   const navBarRef = React.useRef<HTMLElement>(null);
 
   const [showNavDropDown, setShowNavDropDown] = React.useState(false);
+  const [showNavSidePanel, setShowNavSidePanel] = React.useState(false);
 
   const onScroll = React.useCallback(() => {
     if (
@@ -19,6 +20,10 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
     } else {
       setShowNavDropDown(false);
     }
+  }, []);
+
+  const openSidePanelNavigation = React.useCallback(() => {
+    setShowNavSidePanel(true);
   }, []);
 
   React.useEffect(() => {
@@ -40,8 +45,16 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
         {React.Children.map(children, (child) => (
           <div className="mt-1 hidden sm:inline-block">{child}</div>
         ))}
-        <div className="-mr-3 sm:hidden">
-          <HamburgerMenu size="2.25rem" />
+        <div className="-mr-4 flex items-center sm:hidden">
+          <button
+            onClick={openSidePanelNavigation}
+            aria-haspopup="menu"
+            aria-expanded={showNavSidePanel}
+            aria-label="Open navigation menu"
+            className="cursor-pointer"
+          >
+            <HamburgerMenu size="2.25rem" />
+          </button>
         </div>
       </nav>
       <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
