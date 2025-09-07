@@ -2,7 +2,7 @@
 
 import React from "react";
 import DropDownNavButton from "./drop-down-nav-button";
-import HamburgerMenu from "../icons/hamburger-menu";
+import RetroComputer from "../icons/retro-computer";
 
 const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   const navBarRef = React.useRef<HTMLElement>(null);
@@ -30,14 +30,14 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
       <nav
         ref={navBarRef}
         aria-label="Main Nav Bar"
-        className="container-shadow bg-foreground m-4 box-border flex items-center justify-between rounded-md px-8 py-4 sm:justify-end sm:gap-16"
+        className="container-shadow bg-foreground m-4 box-border flex items-center justify-end rounded-md px-8 py-3 sm:gap-16"
         inert={showNavDropDown}
       >
-        <div className="-ml-3 self-start text-white sm:hidden">
-          <HamburgerMenu size="2rem" />
+        <div className="mr-auto -ml-3 text-white">
+          <RetroComputer size="3.5rem" />
         </div>
         {React.Children.map(children, (child) => (
-          <div className="mt-1 hidden sm:block">{child}</div>
+          <div className="mt-1 hidden sm:inline-block">{child}</div>
         ))}
       </nav>
       <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
