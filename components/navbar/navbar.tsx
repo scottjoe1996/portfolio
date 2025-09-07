@@ -4,6 +4,7 @@ import React from "react";
 import DropDownNavButton from "./drop-down-nav-button";
 import RetroComputer from "../icons/retro-computer";
 import HamburgerMenu from "../icons/hamburger-menu";
+import NavSidePanel from "./nav-side-panel";
 
 const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
   const navBarRef = React.useRef<HTMLElement>(null);
@@ -37,7 +38,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
         ref={navBarRef}
         aria-label="Main Nav Bar"
         className="container-shadow bg-foreground m-4 box-border flex items-center justify-end rounded-md px-8 py-3 sm:gap-16"
-        inert={showNavDropDown}
+        inert={showNavDropDown || showNavSidePanel}
       >
         <div className="mr-auto -ml-4.5 text-white">
           <RetroComputer size="3rem" />
@@ -57,6 +58,7 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
           </button>
         </div>
       </nav>
+      <NavSidePanel show={showNavSidePanel} />
       <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
     </>
   );
