@@ -16,7 +16,7 @@
 
 @layer components {
   .container-shadow {
-    @apply shadow-md shadow-zinc-500/60;
+    @apply shadow-md/20;
   }
 }
 
