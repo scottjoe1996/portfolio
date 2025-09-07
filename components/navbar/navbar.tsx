@@ -27,6 +27,10 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
     setShowNavSidePanel(true);
   }, []);
 
+  const closeSidePanelNavigation = React.useCallback(() => {
+    setShowNavSidePanel(false);
+  }, []);
+
   React.useEffect(() => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -51,14 +55,16 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
             onClick={openSidePanelNavigation}
             aria-haspopup="menu"
             aria-expanded={showNavSidePanel}
-            aria-label="Open navigation menu"
+            aria-label="Open navigation side panel"
             className="cursor-pointer"
           >
             <HamburgerMenu size="2.25rem" />
           </button>
         </div>
       </nav>
-      <NavSidePanel show={showNavSidePanel} />
+      <NavSidePanel show={showNavSidePanel} onClose={closeSidePanelNavigation}>
+        {children}
+      </NavSidePanel>
       <DropDownNavButton show={showNavDropDown}>{children}</DropDownNavButton>
     </>
   );
