@@ -41,16 +41,16 @@ const Navbar: React.FC<React.PropsWithChildren> = ({ children }) => {
       <nav
         ref={navBarRef}
         aria-label="Main Nav Bar"
-        className="container-shadow bg-foreground m-4 box-border flex items-center justify-end rounded-md px-8 py-3 sm:gap-16"
+        className="container-shadow bg-foreground m-4 box-border flex items-center justify-end rounded-md px-8 py-2 sm:gap-16"
         inert={showNavDropDown || showNavSidePanel}
       >
         <div className="mr-auto -ml-4.5 text-white">
-          <RetroComputer size="3rem" />
+          <RetroComputer size="3.5rem" />
         </div>
         {React.Children.map(children, (child) => (
           <div className="mt-1 hidden sm:inline-block">{child}</div>
         ))}
-        <div className="-mr-4 flex items-center sm:hidden">
+        <div className="-mr-3 flex items-center sm:hidden">
           <button
             onClick={openSidePanelNavigation}
             aria-haspopup="menu"
