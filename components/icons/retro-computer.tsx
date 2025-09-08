@@ -1,10 +1,44 @@
+"use client";
+
 import React from "react";
 
 interface RetroComputerProps {
   size: string;
 }
 
+interface Coordinates {
+  x: number;
+  y: number;
+}
+
+const INITIAL_LEFT_EYE_POSITION: Coordinates = { x: 71.13, y: 46.13 };
+const INITIAL_RIGHT_EYE_POSITION: Coordinates = { x: 37.79, y: 46.13 };
+
 const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
+  const [leftEyeCoordinates, setLeftEyeCoordinates] =
+    React.useState<Coordinates>(INITIAL_LEFT_EYE_POSITION);
+  const [rightEyeCoordinates, setRightEyeCoordinates] =
+    React.useState<Coordinates>(INITIAL_RIGHT_EYE_POSITION);
+
+  React.useEffect(() => {
+    const onMoveEvent = (event: MouseEvent) => {
+      const xMovement = event.clientX / 350;
+      const yMovement = event.clientY / 200;
+
+      setLeftEyeCoordinates(() => ({
+        x: INITIAL_LEFT_EYE_POSITION.x + xMovement,
+        y: INITIAL_LEFT_EYE_POSITION.y + yMovement,
+      }));
+      setRightEyeCoordinates(() => ({
+        x: INITIAL_RIGHT_EYE_POSITION.x + xMovement,
+        y: INITIAL_RIGHT_EYE_POSITION.y + yMovement,
+      }));
+    };
+
+    window.addEventListener("mousemove", onMoveEvent);
+    return () => window.removeEventListener("mousemove", onMoveEvent);
+  }, []);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +82,18 @@ const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
               x2="66.96"
               y2="66.96"
             />
-            <circle id="right-eye" cx="71.13" cy="46.13" r="4.17" />
-            <circle id="left-eye" cx="37.79" cy="46.13" r="4.17" />
+            <circle
+              id="right-eye"
+              cx={rightEyeCoordinates.x}
+              cy={rightEyeCoordinates.y}
+              r="4.17"
+            />
+            <circle
+              id="left-eye"
+              cx={leftEyeCoordinates.x}
+              cy={leftEyeCoordinates.y}
+              r="4.17"
+            />
           </g>
           <g id="screen-highlights">
             <path
