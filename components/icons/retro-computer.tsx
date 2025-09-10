@@ -11,33 +11,51 @@ interface Coordinates {
   y: number;
 }
 
-const INITIAL_LEFT_EYE_POSITION: Coordinates = { x: 71.13, y: 46.13 };
-const INITIAL_RIGHT_EYE_POSITION: Coordinates = { x: 37.79, y: 46.13 };
+const INITIAL_LEFT_EYE_POSITION: Coordinates = { x: 37.79, y: 46.13 };
+const INITIAL_RIGHT_EYE_POSITION: Coordinates = { x: 71.13, y: 46.13 };
 
 const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
   const [leftEyeCoordinates, setLeftEyeCoordinates] =
     React.useState<Coordinates>(INITIAL_LEFT_EYE_POSITION);
   const [rightEyeCoordinates, setRightEyeCoordinates] =
     React.useState<Coordinates>(INITIAL_RIGHT_EYE_POSITION);
+  const rightEyeId = "right-eye";
+  const leftEyeId = "left-eye";
+
+  const getEyeMovement = React.useCallback(
+    (event: MouseEvent, eyeId: string): { x: number; y: number } => {
+      const totalX = window.innerWidth;
+      const totalY = window.innerHeight;
+
+      const eyeElement = document.getElementById(eyeId) as HTMLElement;
+      const eyeElementRect = eyeElement.getBoundingClientRect();
+
+      return {
+        x: ((event.clientX - eyeElementRect.x) / totalX) * 5,
+        y: ((event.clientY - eyeElementRect.y) / totalY) * 10,
+      };
+    },
+    [],
+  );
 
   React.useEffect(() => {
     const onMoveEvent = (event: MouseEvent) => {
-      const xMovement = event.clientX / 350;
-      const yMovement = event.clientY / 200;
+      const leftEyeMovement = getEyeMovement(event, leftEyeId);
+      const rightEyeMovement = getEyeMovement(event, rightEyeId);
 
       setLeftEyeCoordinates(() => ({
-        x: INITIAL_LEFT_EYE_POSITION.x + xMovement,
-        y: INITIAL_LEFT_EYE_POSITION.y + yMovement,
+        x: INITIAL_LEFT_EYE_POSITION.x + rightEyeMovement.x,
+        y: INITIAL_LEFT_EYE_POSITION.y + rightEyeMovement.y,
       }));
       setRightEyeCoordinates(() => ({
-        x: INITIAL_RIGHT_EYE_POSITION.x + xMovement,
-        y: INITIAL_RIGHT_EYE_POSITION.y + yMovement,
+        x: INITIAL_RIGHT_EYE_POSITION.x + leftEyeMovement.x,
+        y: INITIAL_RIGHT_EYE_POSITION.y + leftEyeMovement.y,
       }));
     };
 
     window.addEventListener("mousemove", onMoveEvent);
     return () => window.removeEventListener("mousemove", onMoveEvent);
-  }, []);
+  }, [getEyeMovement]);
 
   return (
     <svg
@@ -83,13 +101,13 @@ const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
               y2="66.96"
             />
             <circle
-              id="right-eye"
+              id={rightEyeId}
               cx={rightEyeCoordinates.x}
               cy={rightEyeCoordinates.y}
               r="4.17"
             />
             <circle
-              id="left-eye"
+              id={leftEyeId}
               cx={leftEyeCoordinates.x}
               cy={leftEyeCoordinates.y}
               r="4.17"
