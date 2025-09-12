@@ -4,6 +4,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 import Button from "@/components/button";
+import Resume from "@/components/icons/resume";
 
 import styles from "./home-section.module.css";
 
@@ -40,7 +41,11 @@ const HomeSection: React.FC = () => {
             }}
           />
         </p>
-        <Button onClick={handleResumeClick} icon={<>TODO ICON</>}>
+        <Button
+          onClick={handleResumeClick}
+          icon={<Resume size="2rem" />}
+          className="text-xl"
+        >
           Resume
         </Button>
       </div>
