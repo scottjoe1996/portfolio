@@ -1,10 +1,8 @@
 import React from "react";
 
-interface EmailProps {
-  size: string;
-}
+import { Icon } from "./icon";
 
-const Email: React.FC<EmailProps> = ({ size }) => {
+const Email: React.FC<Icon> = ({ size = "1rem" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

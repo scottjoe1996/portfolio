@@ -1,10 +1,8 @@
 import React from "react";
 
-interface CrossProps {
-  size: string;
-}
+import { Icon } from "./icon";
 
-const Cross: React.FC<CrossProps> = ({ size }) => {
+const Cross: React.FC<Icon> = ({ size = "1rem" }) => {
   return (
     <svg height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
       <g id="cross">

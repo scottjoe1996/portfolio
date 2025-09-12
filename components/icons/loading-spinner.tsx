@@ -1,10 +1,8 @@
 import React from "react";
 
-interface LoadingSpinnerProps {
-  size: string;
-}
+import { Icon } from "./icon";
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size }) => {
+const LoadingSpinner: React.FC<Icon> = ({ size = "1rem" }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height={size}>
       <title id="loading-spinner-title">Loading spinner</title>

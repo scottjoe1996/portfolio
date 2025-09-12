@@ -1,11 +1,15 @@
 import React from "react";
 
-interface HamburgerMenuProps {
-  size: string;
+import { Icon } from "./icon";
+
+interface HamburgerMenuProps extends Icon {
   open?: boolean;
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ size, open = true }) => {
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
+  size = "1rem",
+  open = true,
+}) => {
   const animationClassNames = `transition-[width] duration-300 ${open ? "w-full" : "w-1/5"}`;
 
   return (

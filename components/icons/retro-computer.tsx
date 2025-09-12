@@ -2,9 +2,7 @@
 
 import React from "react";
 
-interface RetroComputerProps {
-  size: string;
-}
+import { Icon } from "./icon";
 
 interface Coordinates {
   x: number;
@@ -14,7 +12,7 @@ interface Coordinates {
 const INITIAL_LEFT_EYE_POSITION: Coordinates = { x: 37.79, y: 46.13 };
 const INITIAL_RIGHT_EYE_POSITION: Coordinates = { x: 71.13, y: 46.13 };
 
-const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
+const RetroComputer: React.FC<Icon> = ({ size = "1rem" }) => {
   const [leftEyeCoordinates, setLeftEyeCoordinates] =
     React.useState<Coordinates>(INITIAL_LEFT_EYE_POSITION);
   const [rightEyeCoordinates, setRightEyeCoordinates] =

@@ -1,14 +1,9 @@
 "use client";
 
 import React from "react";
+import { Icon } from "./icon";
 
-interface ArrowScrollSuggestionProps {
-  size: string;
-}
-
-const ArrowScrollSuggestion: React.FC<ArrowScrollSuggestionProps> = ({
-  size,
-}) => {
+const ArrowScrollSuggestion: React.FC<Icon> = ({ size = "1rem" }) => {
   const [show, setShow] = React.useState(false);
   const [delayedShowTimeoutId, setDelayedShowTimeoutId] =
     React.useState<NodeJS.Timeout>();

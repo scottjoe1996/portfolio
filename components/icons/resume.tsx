@@ -1,10 +1,8 @@
 import React from "react";
 
-interface ResumeProps {
-  size: string;
-}
+import { Icon } from "./icon";
 
-const Resume: React.FC<ResumeProps> = ({ size }) => {
+const Resume: React.FC<Icon> = ({ size = "1rem" }) => {
   return (
     <svg
       height={size}
