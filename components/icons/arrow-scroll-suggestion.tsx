@@ -1,9 +1,13 @@
 "use client";
 
 import React from "react";
+
 import { Icon } from "./icon";
 
-const ArrowScrollSuggestion: React.FC<Icon> = ({ size = "1rem" }) => {
+const ArrowScrollSuggestion: React.FC<Icon> = ({
+  size = "1rem",
+  className,
+}) => {
   const [show, setShow] = React.useState(false);
   const [delayedShowTimeoutId, setDelayedShowTimeoutId] =
     React.useState<NodeJS.Timeout>();
@@ -48,7 +52,7 @@ const ArrowScrollSuggestion: React.FC<Icon> = ({ size = "1rem" }) => {
       aria-labelledby="arrow-title arrow-description"
       viewBox="0 0 210 210"
       height={size}
-      className={`container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[82vh] opacity-100" : "top-[81vh] opacity-0"}`}
+      className={`${className} container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[82vh] opacity-100" : "top-[81vh] opacity-0"}`}
     >
       <title id="arrow-title">Scroll Suggestion Arrow</title>
       <desc id="arrow-description">

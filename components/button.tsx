@@ -15,9 +15,20 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const SIZE_STYLES: Record<Size, { iconSize: string; buttonClass: string }> = {
-  small: { iconSize: "1rem", buttonClass: "text-sm font-medium" },
-  large: { iconSize: "2rem", buttonClass: "text-xl" },
+const SIZE_STYLES: Record<
+  Size,
+  {
+    icon: { size: string; className?: string };
+    buttonClass: string;
+    childrenClass?: string;
+  }
+> = {
+  small: { icon: { size: "1rem" }, buttonClass: "text-sm font-medium" },
+  large: {
+    icon: { size: "2rem" },
+    buttonClass: "text-xl",
+    childrenClass: "px-3",
+  },
 };
 
 const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
@@ -50,11 +61,19 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
       onClick={handleClick}
     >
       {isLoading ? (
-        <LoadingSpinner size={sizeStyle.iconSize} />
+        <LoadingSpinner
+          size={sizeStyle.icon.size}
+          className={sizeStyle.icon.className}
+        />
       ) : (
-        Icon && <Icon size={sizeStyle.iconSize} />
+        Icon && (
+          <Icon
+            size={sizeStyle.icon.size}
+            className={sizeStyle.icon.className}
+          />
+        )
       )}
-      {children}
+      <span className={sizeStyle.childrenClass}>{children}</span>
     </button>
   );
 };

@@ -8,6 +8,7 @@ interface HamburgerMenuProps extends Icon {
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   size = "1rem",
+  className,
   open = true,
 }) => {
   const animationClassNames = `transition-[width] duration-300 ${open ? "w-full" : "w-1/5"}`;
@@ -17,6 +18,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 170.08 184.25"
       height={size}
+      className={className}
     >
       <g id="hamburger-menu" className="fill-zinc-100">
         <g id="bottom-bar">

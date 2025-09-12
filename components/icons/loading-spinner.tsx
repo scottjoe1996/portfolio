@@ -2,9 +2,14 @@ import React from "react";
 
 import { Icon } from "./icon";
 
-const LoadingSpinner: React.FC<Icon> = ({ size = "1rem" }) => {
+const LoadingSpinner: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height={size}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      height={size}
+      className={className}
+    >
       <title id="loading-spinner-title">Loading spinner</title>
       <desc id="loading-spinner-description">
         A spinning loading indicator.

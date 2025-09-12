@@ -12,7 +12,7 @@ interface Coordinates {
 const INITIAL_LEFT_EYE_POSITION: Coordinates = { x: 37.79, y: 46.13 };
 const INITIAL_RIGHT_EYE_POSITION: Coordinates = { x: 71.13, y: 46.13 };
 
-const RetroComputer: React.FC<Icon> = ({ size = "1rem" }) => {
+const RetroComputer: React.FC<Icon> = ({ size = "1rem", className }) => {
   const [leftEyeCoordinates, setLeftEyeCoordinates] =
     React.useState<Coordinates>(INITIAL_LEFT_EYE_POSITION);
   const [rightEyeCoordinates, setRightEyeCoordinates] =
@@ -60,6 +60,7 @@ const RetroComputer: React.FC<Icon> = ({ size = "1rem" }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100.59 100.59"
       height={size}
+      className={className}
       aria-description="A retro computer who's screen has a nuetral face"
     >
       <g id="retro-computer-colour">
