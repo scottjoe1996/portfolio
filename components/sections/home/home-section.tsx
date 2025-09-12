@@ -41,11 +41,7 @@ const HomeSection: React.FC = () => {
             }}
           />
         </p>
-        <Button
-          onClick={handleResumeClick}
-          icon={<Resume size="2rem" />}
-          className="text-xl"
-        >
+        <Button onClick={handleResumeClick} icon={Resume} size="large">
           Resume
         </Button>
       </div>

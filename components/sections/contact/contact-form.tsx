@@ -79,12 +79,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSendMessage }) => {
         disabled={isLoading}
         {...register("message")}
       />
-      <Button
-        type="submit"
-        isLoading={isLoading}
-        icon={<Email size="1rem" />}
-        className="text-sm font-medium"
-      >
+      <Button type="submit" isLoading={isLoading} icon={Email}>
         Send Email
       </Button>
     </form>
