@@ -3,9 +3,15 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+import Button from "@/components/button";
+
 import styles from "./home-section.module.css";
 
 const HomeSection: React.FC = () => {
+  const handleResumeClick = React.useCallback(() => {
+    window.open("/joseph-scott-cv.pdf", "_blank");
+  }, []);
+
   return (
     <section className="flex min-h-[calc(100vh-96px)] w-full flex-row flex-wrap-reverse content-center items-center justify-center px-4 py-30">
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
@@ -34,6 +40,9 @@ const HomeSection: React.FC = () => {
             }}
           />
         </p>
+        <Button onClick={handleResumeClick} icon={<>TODO ICON</>}>
+          Resume
+        </Button>
       </div>
       <div className="max-w-xl min-w-2xs shrink grow basis-md p-10">
         <div className="bg-primary aspect-square size-full rotate-10" />

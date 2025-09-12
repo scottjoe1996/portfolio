@@ -6,7 +6,7 @@ import z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Email from "@/components/icons/email";
-import LoadingSpinner from "@/components/icons/loading-spinner";
+import Button from "@/components/button";
 
 import TextField from "./text-field";
 import TextareaField from "./textarea-field";
@@ -79,14 +79,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSendMessage }) => {
         disabled={isLoading}
         {...register("message")}
       />
-      <button
-        type="submit"
-        className="container-shadow bg-foreground focus:ring-primary flex items-center justify-between gap-2.5 rounded-md px-3 py-2.5 text-sm font-medium text-white hover:cursor-pointer hover:bg-zinc-800 focus:ring-4 focus:outline-none disabled:cursor-not-allowed disabled:bg-zinc-600"
-        disabled={isLoading}
-      >
-        {isLoading ? <LoadingSpinner size="1rem" /> : <Email size="1rem" />}
+      <Button type="submit" isLoading={isLoading} icon={<Email size="1rem" />}>
         Send Email
-      </button>
+      </Button>
     </form>
   );
 };

@@ -31,8 +31,8 @@ const RetroComputer: React.FC<RetroComputerProps> = ({ size }) => {
       const eyeElementRect = eyeElement.getBoundingClientRect();
 
       return {
-        x: ((event.clientX - eyeElementRect.x) / totalX) * 5,
-        y: ((event.clientY - eyeElementRect.y) / totalY) * 10,
+        x: Math.min(((event.clientX - eyeElementRect.x) / totalX) * 5, 5),
+        y: Math.min(((event.clientY - eyeElementRect.y) / totalY) * 10, 10),
       };
     },
     [],
