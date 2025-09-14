@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import Typewriter from "typewriter-effect";
 
 import Button from "@/components/button";
 import Resume from "@/components/icons/resume";
 
-import styles from "./home-section.module.css";
+import TextDrop from "./text-drop";
 
 const HomeSection: React.FC = () => {
   const handleResumeClick = React.useCallback(() => {
@@ -18,29 +17,17 @@ const HomeSection: React.FC = () => {
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
-        <p className="min-h-40 text-4xl text-pretty">
-          I am a web developer that
-          <Typewriter
-            component={"span"}
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(" builds with purpose.")
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString(" meets deadlines.")
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString(" exceeds expectations.")
-                .start();
-            }}
-            options={{
-              delay: 35,
-              deleteSpeed: 35,
-              wrapperClassName: "text-primary font-bold",
-              cursorClassName: `text-primary font-bold ${styles.caret} font-sans`,
-            }}
+        <div className="flex flex-wrap text-4xl">
+          <span>I am a web developer that </span>
+          <TextDrop
+            className="text-primary font-bold"
+            texts={[
+              "builds with purpose",
+              "meets deadlines",
+              "exceeds expections",
+            ]}
           />
-        </p>
+        </div>
         <Button onClick={handleResumeClick} icon={Resume} size="large">
           Resume
         </Button>
