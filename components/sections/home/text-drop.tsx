@@ -31,18 +31,22 @@ const TextDrop: React.FC<TextDropProps> = ({ texts, className }) => {
     });
     setContainerWidth(largestWidth);
     setContainerHeight(largestHeight);
-  }, []);
+  }, [texts]);
 
   return (
     <span
-      className={`${className} relative inline-block`}
+      className={`${className} relative inline-grid`}
       style={{ width: containerWidth, height: containerHeight }}
     >
       {texts.map((text, index) => {
         const id = `${ID_PREFIX}-${index}`;
         return (
-          <motion.span id={id} key={id} className="absolute text-nowrap">
-            {text}
+          <motion.span
+            id={id}
+            key={id}
+            className="col-start-1 row-start-1 text-nowrap"
+          >
+            &nbsp;{text}
           </motion.span>
         );
       })}

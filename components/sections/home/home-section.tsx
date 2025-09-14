@@ -13,12 +13,12 @@ const HomeSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex min-h-[calc(100vh-96px)] w-full flex-row flex-wrap-reverse content-center items-center justify-center px-4 py-30">
+    <section className="flex min-h-[calc(100vh-96px)] w-full flex-row flex-wrap-reverse content-center items-center justify-center px-4 pt-15 pb-30">
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
         <div className="flex flex-wrap text-4xl">
-          <span>I am a web developer that </span>
+          <span>I am a web developer that</span>
           <TextDrop
             className="text-primary font-bold"
             texts={[
