@@ -17,8 +17,8 @@ const HomeSection: React.FC = () => {
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
-        <div className="flex flex-wrap text-4xl">
-          <span>I am a web developer that</span>
+        <div className="mb-4 flex flex-wrap text-4xl">
+          <span>I am a web developer that&nbsp;</span>
           <TextDrop
             className="text-primary font-bold"
             texts={[
