@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 import Button from "@/components/button";
 import Resume from "@/components/icons/resume";
@@ -13,7 +14,7 @@ const HomeSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex min-h-[calc(100vh-96px)] w-full flex-row flex-wrap-reverse content-center items-center justify-center px-4 pt-15 pb-30">
+    <section className="flex min-h-[calc(100vh-96px)] w-full flex-row flex-wrap-reverse content-center items-center justify-center gap-6 px-4 pt-5 pb-30">
       <div className="max-w-4xl min-w-xs shrink grow basis-md">
         <p className="mb-1 text-xl">Hi, my name is</p>
         <h1 className="mb-2 text-7xl">JOSEPH SCOTT</h1>
@@ -32,8 +33,14 @@ const HomeSection: React.FC = () => {
           Resume
         </Button>
       </div>
-      <div className="max-w-xl min-w-2xs shrink grow basis-md p-10">
-        <div className="bg-primary aspect-square size-full rotate-10" />
+      <div className="max-w-2xl min-w-sm shrink grow basis-md">
+        <Image
+          src="/profile-picture.png"
+          alt="Picture of Joseph Scott"
+          priority={true}
+          width={1024}
+          height={1024}
+        />
       </div>
     </section>
   );
