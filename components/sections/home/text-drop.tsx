@@ -16,7 +16,7 @@ const TextDrop: React.FC<TextDropProps> = ({ texts, className }) => {
     }
     const interval = setInterval(() => {
       setShowTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 2500);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [texts.length, showTextIndex]);
@@ -37,7 +37,7 @@ const TextDrop: React.FC<TextDropProps> = ({ texts, className }) => {
                 exit={{ y: "50%", opacity: 0 }}
                 transition={{
                   y: { type: "spring", duration: 0.5 },
-                  opacity: { duration: 0.3 },
+                  opacity: { duration: 0.2 },
                 }}
               >
                 {text}
