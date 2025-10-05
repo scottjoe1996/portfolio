@@ -3,6 +3,9 @@
 import React from "react";
 
 import sendMessage from "@/actions/message";
+import Github from "@/components/icons/github";
+import Reddit from "@/components/icons/reddit";
+import LinkedIn from "@/components/icons/linked-in";
 
 import ContactForm from "./contact-form";
 import SectionWrapper from "../section-wrapper";
@@ -65,6 +68,12 @@ const ContactSection: React.FC = () => {
             )}
           </div>
         )}
+      </div>
+      <hr className="mx-auto mt-12 mb-6 h-0.5 max-w-md border-t-0 bg-zinc-300" />
+      <div className="flex justify-center gap-8">
+        <Github size="1.75rem" />
+        <Reddit size="1.75rem" />
+        <LinkedIn size="1.75rem" />
       </div>
     </SectionWrapper>
   );
