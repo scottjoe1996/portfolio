@@ -16,7 +16,7 @@ const ContactSection: React.FC = () => {
     <SectionWrapper
       id="contact"
       title="Contact me"
-      sectionClasses={["bg-zinc-200"]}
+      sectionClasses={["bg-zinc-200", "min-h-screen"]}
     >
       <div className="flex min-h-[440px] items-center justify-center gap-2">
         {formState === "INITIAL" ? (
