@@ -9,7 +9,6 @@ import LinkedIn from "@/components/icons/linked-in";
 
 import ContactForm from "./contact-form";
 import SectionWrapper from "../section-wrapper";
-import Button from "@/components/button";
 
 type FormState = "INITIAL" | "SENT" | "ERROR";
 
