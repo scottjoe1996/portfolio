@@ -21,7 +21,7 @@ const NavLink: React.FC<React.PropsWithChildren<NavLinkProps>> = ({
   return (
     <Link
       href={href}
-      className="group font-bold text-zinc-100 outline-none"
+      className="group z-10 font-bold text-zinc-100 outline-none"
       onClick={disablePropagation}
     >
       <div className="w-fit">
