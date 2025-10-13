@@ -2,7 +2,7 @@
 
 :root {
   --background: theme("colors.zinc.100");
-  --foreground: theme("colors.zinc.900");
+  --foreground: theme("colors.zinc.950");
   --primary: theme("colors.emerald.500");
 }
 

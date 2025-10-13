@@ -1,6 +1,7 @@
 import React from "react";
-import { createDurationText, Duration } from "./duration";
 import SkillChip from "@/components/chips/skill-chip";
+
+import { createDurationText, Duration } from "./duration";
 
 export interface ExperienceCardProps {
   role: string;
@@ -18,7 +19,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   const durationText = createDurationText(duration);
 
   return (
-    <div className="bg-foreground container-shadow flex flex-1 flex-row gap-4 rounded-md p-3 text-zinc-50">
+    <div className="container-shadow flex flex-1 flex-row gap-4 rounded-md bg-zinc-900 p-3 text-zinc-50">
       <span className="xs:inline hidden min-w-28 text-sm leading-6 font-semibold text-nowrap text-zinc-300 md:hidden">
         {durationText}
       </span>

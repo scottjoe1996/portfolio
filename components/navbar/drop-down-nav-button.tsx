@@ -94,7 +94,7 @@ const DropDownNavButton: React.FC<
                 <li
                   role="menuitem"
                   onBlur={handleMenuItemBlur}
-                  className="group w-fit leading-5"
+                  className="group w-full leading-5"
                 >
                   {child}
                 </li>
