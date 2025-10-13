@@ -9,7 +9,7 @@ interface DropDownNavButtonProps {
 const DropDownNavButton: React.FC<
   React.PropsWithChildren<DropDownNavButtonProps>
 > = ({ children, show }) => {
-  const [showMenu, setShowMenu] = React.useState(true);
+  const [showMenu, setShowMenu] = React.useState(false);
   const [size, setSize] = React.useState<{ width: number; height: number }>({
     width: 0,
     height: 0,
