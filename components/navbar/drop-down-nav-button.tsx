@@ -22,17 +22,17 @@ const DropDownNavButton: React.FC<
     return () => setShowMenu(open);
   }, []);
 
-  // const handleMenuItemBlur = React.useCallback(
-  //   (event: React.FocusEvent<HTMLLIElement>) => {
-  //     const menuElement = document.getElementById(menuId);
+  const handleMenuItemBlur = React.useCallback(
+    (event: React.FocusEvent<HTMLLIElement>) => {
+      const menuElement = document.getElementById(menuId);
 
-  //     if (menuElement && menuElement.contains(event.relatedTarget)) {
-  //       return;
-  //     }
-  //     setShowMenu(false);
-  //   },
-  //   [],
-  // );
+      if (menuElement && menuElement.contains(event.relatedTarget)) {
+        return;
+      }
+      setShowMenu(false);
+    },
+    [],
+  );
 
   const handleButtonClick = React.useCallback(() => {
     setShowMenu(true);
@@ -93,7 +93,7 @@ const DropDownNavButton: React.FC<
               {React.Children.map(children, (child) => (
                 <li
                   role="menuitem"
-                  // onBlur={handleMenuItemBlur}
+                  onBlur={handleMenuItemBlur}
                   className="group w-full leading-5"
                 >
                   {child}
