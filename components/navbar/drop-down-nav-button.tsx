@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import React from "react";
 import HamburgerMenu from "../icons/hamburger-menu";
+import { NavLinkProps } from "./nav-link";
 
 interface DropDownNavButtonProps {
   show: boolean;
@@ -22,14 +23,13 @@ const DropDownNavButton: React.FC<
     return () => setShowMenu(open);
   }, []);
 
-  const handleMenuItemBlur = React.useCallback(
-    (event: React.FocusEvent<HTMLLIElement>) => {
+  const handleLinkBlur = React.useCallback(
+    (event: React.FocusEvent<HTMLAnchorElement>) => {
       const menuElement = document.getElementById(menuId);
 
-      if (menuElement && menuElement.contains(event.relatedTarget)) {
-        return;
+      if (menuElement && !menuElement.contains(event.relatedTarget)) {
+        setShowMenu(false);
       }
-      setShowMenu(false);
     },
     [],
   );
@@ -90,15 +90,21 @@ const DropDownNavButton: React.FC<
               role="menu"
               className="px-2 *:not-first:not-last:my-2"
             >
-              {React.Children.map(children, (child) => (
-                <li
-                  role="menuitem"
-                  onBlur={handleMenuItemBlur}
-                  className="group w-full leading-5"
-                >
-                  {child}
-                </li>
-              ))}
+              {React.Children.map(children, (child) => {
+                if (!React.isValidElement<NavLinkProps>(child)) {
+                  return null;
+                }
+
+                const clonedChild = React.cloneElement(child, {
+                  onBlur: handleLinkBlur,
+                });
+
+                return (
+                  <li role="menuitem" className="w-full leading-5">
+                    {clonedChild}
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             <button
