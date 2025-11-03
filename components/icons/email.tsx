@@ -7,7 +7,7 @@ const Email: React.FC<Icon> = ({ size = "1rem", className }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 197.64 187.75"
-      height={size}
+      style={{ height: size }}
       className={className}
     >
       <title id="email-title">Paper plane</title>

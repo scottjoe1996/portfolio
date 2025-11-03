@@ -5,7 +5,7 @@ import { Icon } from "./icon";
 const LinkedIn: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
-      height={size}
+      style={{ height: size }}
       className={className}
       fillRule="evenodd"
       clipRule="evenodd"

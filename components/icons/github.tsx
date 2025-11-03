@@ -6,7 +6,7 @@ const Github: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
       enableBackground="new 0 0 32 32"
-      height={size}
+      style={{ height: size }}
       className={className}
       version="1.0"
       viewBox="0 0 32 32"

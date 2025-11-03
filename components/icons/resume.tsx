@@ -5,7 +5,7 @@ import { Icon } from "./icon";
 const Resume: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
-      height={size}
+      style={{ height: size }}
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 151.74 180.08"

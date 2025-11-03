@@ -7,7 +7,7 @@ const LoadingSpinner: React.FC<Icon> = ({ size = "1rem", className }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
-      height={size}
+      style={{ height: size }}
       className={className}
     >
       <title id="loading-spinner-title">Loading spinner</title>

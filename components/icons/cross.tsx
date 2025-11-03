@@ -5,7 +5,7 @@ import { Icon } from "./icon";
 const Cross: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
-      height={size}
+      style={{ height: size }}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 120 120"
       className={className}

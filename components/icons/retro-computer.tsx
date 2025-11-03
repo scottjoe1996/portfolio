@@ -59,7 +59,7 @@ const RetroComputer: React.FC<Icon> = ({ size = "1rem", className }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100.59 100.59"
-      height={size}
+      style={{ height: size }}
       className={className}
       aria-description="A retro computer who's screen has a nuetral face"
     >

@@ -6,7 +6,7 @@ const Reddit: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
       version="1.1"
-      height={size}
+      style={{ height: size }}
       viewBox="0 0 512 512"
       fillRule="evenodd"
       clipRule="evenodd"

@@ -51,7 +51,7 @@ const ArrowScrollSuggestion: React.FC<Icon> = ({
       role="img"
       aria-labelledby="arrow-title arrow-description"
       viewBox="0 0 210 210"
-      height={size}
+      style={{ height: size }}
       className={`${className} container-shadow absolute hidden rounded-full fill-white transition-[opacity,top] duration-1000 ease-in-out lg:inline ${show ? "top-[82vh] opacity-100" : "top-[81vh] opacity-0"}`}
     >
       <title id="arrow-title">Scroll Suggestion Arrow</title>
