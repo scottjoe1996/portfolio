@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import React from "react";
+import { isMobile } from "react-device-detect";
+
 import HamburgerMenu from "../icons/hamburger-menu";
 import { NavLinkProps } from "./nav-link";
 
@@ -34,13 +36,19 @@ const DropDownNavButton: React.FC<
     [],
   );
 
+  const handleLinkClick = React.useCallback(() => {
+    if (isMobile) {
+      setShowMenu(false);
+    }
+  }, []);
+
   const handleButtonClick = React.useCallback(() => {
     setShowMenu(true);
 
     setTimeout(() => {
       const menuElement = document.getElementById(menuId);
 
-      if (menuElement) {
+      if (menuElement && !isMobile) {
         const firstItemAnchor = menuElement.querySelector(
           '[role="menuitem"] a',
         ) as HTMLElement | null;
@@ -97,6 +105,7 @@ const DropDownNavButton: React.FC<
 
                 const clonedChild = React.cloneElement(child, {
                   onBlur: handleLinkBlur,
+                  onClick: handleLinkClick,
                 });
 
                 return (

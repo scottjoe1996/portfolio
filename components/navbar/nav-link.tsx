@@ -6,6 +6,7 @@ import React from "react";
 export interface NavLinkProps {
   href: string;
   onBlur?: (event: React.FocusEvent<HTMLAnchorElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   onKeyDown?: (event: React.KeyboardEvent<HTMLAnchorElement>) => void;
 }
 
@@ -13,6 +14,7 @@ const NavLink: React.FC<React.PropsWithChildren<NavLinkProps>> = ({
   children,
   href,
   onBlur,
+  onClick,
   onKeyDown,
 }) => {
   return (
@@ -20,6 +22,7 @@ const NavLink: React.FC<React.PropsWithChildren<NavLinkProps>> = ({
       href={href}
       className="group z-10 font-bold text-zinc-100 outline-none"
       onBlur={onBlur}
+      onClick={onClick}
       onKeyDown={onKeyDown}
     >
       <div className="w-fit">
