@@ -7,6 +7,7 @@ import Button from "@/components/button";
 import Resume from "@/components/icons/resume";
 
 import TextDrop from "./text-drop";
+import ProfilePicture from "./profile-picture";
 
 const HomeSection: React.FC = () => {
   const handleResumeClick = React.useCallback(() => {
@@ -34,13 +35,7 @@ const HomeSection: React.FC = () => {
         </Button>
       </div>
       <div className="max-w-2xl min-w-sm shrink grow basis-md">
-        <Image
-          src="/profile-picture.png"
-          alt="Picture of Joseph Scott"
-          priority={true}
-          width={1024}
-          height={1024}
-        />
+        <ProfilePicture />
       </div>
     </section>
   );
