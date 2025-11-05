@@ -69,7 +69,7 @@ const ContactSection: React.FC = () => {
           </div>
         )}
       </div>
-      <hr className="mx-auto mt-40 mb-4 h-0.5 w-full border-t-0 bg-zinc-300" />
+      <hr className="mx-auto mt-10 mb-4 h-0.5 w-full border-t-0 bg-zinc-300" />
       <h3 className="mb-1 text-end font-semibold text-zinc-500">Follow me</h3>
       <div className="flex justify-end gap-4">
         <a href="https://github.com/scottjoe1996/" target="_blank">

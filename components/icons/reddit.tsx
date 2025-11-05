@@ -7,6 +7,7 @@ const Reddit: React.FC<Icon> = ({ size = "1rem", className }) => {
     <svg
       version="1.1"
       style={{ height: size }}
+      overflow="visible"
       viewBox="0 0 512 512"
       fillRule="evenodd"
       clipRule="evenodd"

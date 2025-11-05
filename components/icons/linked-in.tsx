@@ -6,6 +6,7 @@ const LinkedIn: React.FC<Icon> = ({ size = "1rem", className }) => {
   return (
     <svg
       style={{ height: size }}
+      overflow="visible"
       className={className}
       fillRule="evenodd"
       clipRule="evenodd"
