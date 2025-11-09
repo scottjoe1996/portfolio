@@ -29,7 +29,7 @@ const NavSidePanel: React.FC<React.PropsWithChildren<NavSidePanelProps>> = ({
   return (
     <div
       inert={!show}
-      className={`absolute top-0 left-0 z-2 transition-opacity duration-300 ${show ? "no-doc-scroll opacity-100" : "opacity-0"} h-screen w-screen overflow-x-hidden bg-zinc-900/30`}
+      className={`absolute top-0 left-0 z-2 transition-opacity duration-300 ${show ? "no-doc-scroll" : "opacity-0"} h-screen w-screen overflow-x-hidden bg-zinc-900/30 will-change-[opacity]`}
     >
       <nav
         className={`bg-foreground relative ml-auto h-full w-xs transition-transform duration-400 ${show ? "translate-x-0" : "translate-x-full"} p-4`}
